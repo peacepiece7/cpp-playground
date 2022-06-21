@@ -32,10 +32,10 @@ int main()
 
 
 	// 변수가 아닌 값을 직접 입력함 = literal이라고 함 ("Hello, world", 1, 2 ,11, 0b11)
-	int num4 = 11; // decimal 
-	int num5 = 011; // 0 = octal 
-	int num6 = 0b11; // 0b = binary 
-	int num7 = 0x11; // 0x = hex 
+	int num4 = 11; // decimal, base 10
+	int num5 = 011; // 0 = octal, base 8
+	int num6 = 0b11; // 0b = binary, base 2
+	int num7 = 0x11; // 0x = hex , base 16
 
 	// integer라서 실수만 나옴
 	cout << "num4 " << num4 << endl; // 11 
@@ -83,4 +83,6 @@ int main()
 	unsigned long long LLIntU = 0LLu;
 
 	std::cout << LLIntU << endl;
+	
 }
+

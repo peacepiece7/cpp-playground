@@ -1,0 +1,5 @@
+﻿  cpp2_1_integer.cpp
+  cpp2_2_float.cpp
+  코드를 생성하고 있습니다...
+cpp2_2_float.obj : error LNK2005: main이(가) cpp2_1_integer.obj에 이미 정의되어 있습니다.
+C:\Users\interbird\source\repos\peacepiece7\cpp-playground\x64\Debug\Cpp2_1.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.
