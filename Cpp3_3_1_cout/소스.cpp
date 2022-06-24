@@ -2,15 +2,13 @@
 #include<iostream>
 #include<iomanip>
 
-
-
 using namespace std;
 
 int main() {
 	cout << '1' << endl;
 	cout << 1 << endl;
 	cout << 'a' << endl;
-	// À§ ÄÚµå´Â ³»ºÎÀûÀ¸·Î ¾Æ·¡ ÄÚµå¸¦ ½ÇÇà
+	// ìœ„ ì½”ë“œëŠ” ë‚´ë¶€ì ìœ¼ë¡œ ì•„ëž˜ ì½”ë“œë¥¼ ì‹¤í–‰
 	operator<<(cout, 'a');
 	cout << (char)97 << endl;
 	cout << 97 << endl;
@@ -18,25 +16,25 @@ int main() {
 	cout.put('a');
 	cout.put('\n');
 	cout.write("hello, world!", 5);
-	// °ø¹é #À¸·Î Ã¤¿ì±â
+	// ê³µë°± #ìœ¼ë¡œ ì±„ìš°ê¸°
 	cout.width(10);
 	cout.fill('#');
 	cout << 1 << endl;
 
-	// Á¤¹Ðµµ 
+	// ì •ë°€ë„ 
 	float num = 0.1234567f;
-	cout << num << endl; //  0.123457 ¼Ò¼ýÁ¡ 6ÀÚ¸®±î¸¸ ³ª¿À´Ï±î ¹Ý¿Ã¸²µÊ
+	cout << num << endl; //  0.123457 ì†Œìˆ«ì  6ìžë¦¬ê¹Œë§Œ ë‚˜ì˜¤ë‹ˆê¹Œ ë°˜ì˜¬ë¦¼ë¨
 
 	cout.precision(2);
 	cout << num << endl;
 
 	cout.precision(10);
-	cout << num << endl; // ÀÌÁø¼ö·Î 0.1234567À» º¯È¯ÀÌ ¾î·Á¿ì´Ï±î ±Ù»çÄ¡·Î º¯°æµÊ ±×·¡¼­ 0.123456016 (½ÇÁ¦·Î ¸Þ¸ð¸®¿¡ 2Áø¼ö·Î ÀúÀåµÈ °ªÀÓ)
+	cout << num << endl; // ì´ì§„ìˆ˜ë¡œ 0.1234567ì„ ë³€í™˜ì´ ì–´ë ¤ìš°ë‹ˆê¹Œ ê·¼ì‚¬ì¹˜ë¡œ ë³€ê²½ë¨ ê·¸ëž˜ì„œ 0.123456016 (ì‹¤ì œë¡œ ë©”ëª¨ë¦¬ì— 2ì§„ìˆ˜ë¡œ ì €ìž¥ëœ ê°’ìž„)
 
 	// flag
 
 
-	// +±âÈ£ Ãß°¡
+	// +ê¸°í˜¸ ì¶”ê°€
 	cout.setf(ios_base::showpos); // show positive
 	cout << 1 << endl;
 	cout << 2 << endl;
@@ -50,7 +48,7 @@ int main() {
 	cout << true << endl;
 	cout << false << endl;
 
-	// Á¤·Ä
+	// ì •ë ¬
 	cout.width(10);
 	cout << -10 << 20 << endl;
 
@@ -86,14 +84,26 @@ int main() {
 	cout.fill('\*');
 	cout << 16 << endl;
 
-	// ÇÔ¼ö´Ï±î ¾Æ·¡Ã³·³µµ ok
+	// í•¨ìˆ˜ë‹ˆê¹Œ ì•„ëž˜ì²˜ëŸ¼ë„ ok
 	std::cout << std::hex << 16 << endl;
 	std::hex(std::cout);
 	cout << 24 << endl;
 	cout << setw(10) << setfill('@') << setprecision(1) << showpos << 1.1f << endl;
 	cout << setw(10) << setfill('@') << setprecision(1) << showpos << 0.1f << endl;
-	cout << setw(10) << setfill('@') << setprecision(10)<< showpos << 1.1f << endl;
- 
+	cout << setw(10) << setfill('@') << setprecision(10) << showpos << 1.1f << endl;
+
 	freopen("output.txt", "w", stdout);
 	cout << setw(10) << setfill('@') << setprecision(10) << showpos << 1.1f << endl;
 }
+Â© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
