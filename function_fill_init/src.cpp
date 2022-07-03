@@ -3,7 +3,8 @@
 using namespace std;
 
 int main() {
-	int v[10];
+	const int num = 10;
+	int v[num];
 	for (int i = 10; i >= 1; i--) v[i - 1] = i;
 	for (int i : v) cout << i << endl;
 
@@ -20,14 +21,17 @@ int main() {
 	cout << *v << endl; // implicitly v[0]
 	cout << v[0] << endl;
 
-	fill(v, v + 10, 10);
+	fill(v, v + num, 10);
 
 	printf("%s\n", "fill");
 	for (int i : v) cout << i << endl;
 
 	// 초기화 라고하는데 vec0[10] 이 문법이 뭔지 잘 모르겠다.. 참조 주소만 찍히고 메서드 아무것도 안 먹힘..
 	vector<int>vec0[10];
-	vector<int>vec1(11, 0);
+	vector<int>vec1(11, 6);
+
+	printf("%s\n", "vec1 vectpor");
+	for (auto i : vec1) cout << i << endl;
 
 	vector<vector<int>> checked;
 	vector<vector<int>> checked1(11 + 1, vector<int>(11 + 1, 0));
