@@ -1,26 +1,80 @@
 #include <bits/stdc++.h>
+#include <cstdio>
+#include <vector>
+#include <algorithm>
+#include <iostream>
 
 using namespace std;
 
-struct Point {
-	int x, y;
-};
+void DFS(int L) {
+	if (L <= 0) return;
 
-bool cmp(const Point a, const Point b) {
-//	cout << a.x << " " << a.y << endl;
-//	cout << b.x << " " << b.y << endl << endl;
-	cout << (a.x < b.x) << endl;
-	return a.x > b.x;
+	DFS(L - 1);
+	cout << L << endl;
+
 }
 
-vector<Point> v;
+vector<int> answer;
+void DFS2(int L) {
+	if (L <= 0) return;
+	cout << L / 2 << endl;
+	DFS2(L / 2);
+	answer.push_back(static_cast<int>(L % 2));
+}
+
+void DFS3(int L) {
+	if (L >= 8) return;
+
+	cout << L << endl;
+	DFS3(L * 2);
+	DFS3(L * 2 + 1);
+
+}
+
+vector<int> arr{ 1, 2, 3 };
+
+
+void DFS4(vector<int> ch, int L, int input) {
+	if (L == input) {
+		vector<int> answer1(3);
+		for (int i = 0; i < ch.size(); ++i) {
+			if (ch[i]) {
+				answer1[i] = arr[i];
+			}
+		}
+		for (int i : answer1) {
+			if (i) cout << i << " ";
+		}
+		cout << endl;
+		return;
+	}
+	ch[L] = 1;
+	DFS4(ch, L + 1, input);
+	ch[L] = 0;
+	DFS4(ch, L + 1, input);
+}
 
 int main() {
+//	{
+//		DFS(3);
+//		return 0;
+//	}
 
-	for (int i = 10; i >= 1; i--) v.push_back({i,i});
+// {
+//	DFS2(17);
+//		for (int i : answer) cout << i << " ";
+//		return 0;
+//	}
 
-	sort(v.begin(), v.end(), cmp);
+// {
+// DFS3(1);
+//	return 0;
+//	}
 
-	for (auto i: v) cout << i.x << " " << i.y << endl;
-	return 0;
-}; 
+	{
+		vector<int> ch{ 0,0,0 };
+		DFS4(ch, 0, 3);
+		return 0;
+	}
+
+}
