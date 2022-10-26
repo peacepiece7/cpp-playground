@@ -4,12 +4,14 @@
 #include<array>
 #include<vector>
 #include<functional>
+#include<Windows.h>
 // #include<bits/stdc++.h>
 
 void pointerArraySummary(); void array1Summary(); void charSummary(); void stringSummary(); void structSummary(); void unionSummary(); void unscopedEnumSummary(); void scopedEnumSummary(); void array2Summary(); std::pair<int, int> makePair(int a, int b); void array3Summary(); void pointerBasicSummary(); void pointerStringSummary(); void dynamicAssignSummary(); void nullptrSummary(); void pointerVoldSummary(); void  pointerVectorSummary(); void referenceSummary(); void functionBasicSummary(int, char* []); void recursionSummary(); void	passByValueSummary(); void passByAddressSummary(int, char**); void passByReferenceSummary(); void defaultParameterSummmary(); void functionOverloadingSummary(); void functionPointerSummary();
 
 
 int main(int argc, char* argv[]) {
+	Sleep(1000);
 	// charSummary();
 	// stringSummary();
 	// structSummary();
