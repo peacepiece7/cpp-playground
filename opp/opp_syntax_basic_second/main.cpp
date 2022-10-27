@@ -81,7 +81,6 @@ void thisPointerSummary() {
 	person0.complete(person1).doCeremony();
 	cout << "2. builder " << "\n";
 	Transaction a = Transaction::Builder().setFromID(1234).setToID(111).setValue(91919).build();
-
 }
 
 class Person1 {
