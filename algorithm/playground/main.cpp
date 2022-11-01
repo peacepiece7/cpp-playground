@@ -17,7 +17,6 @@ void combi(int start, int r, vector<int>v) {
     }
 }
 
-
 int main() {
     while (true) {
         cin >> n;

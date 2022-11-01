@@ -13,7 +13,7 @@ void pointerArraySummary(); void array1Summary(); void charSummary(); void strin
 int main(int argc, char* argv[]) {
 	Sleep(1000);
 	// charSummary();
-	// stringSummary();
+	 stringSummary();
 	// structSummary();
 	// unionSummary();
 	// unscopedEnumSummary();
@@ -131,6 +131,9 @@ void structSummary() {
 	Person persons[5];
 	Person& person2 = persons[2]; // 참조 주소를 가져옴
 	Person person3 = persons[3]; // 새로운 객체가 생성
+	Person* persons1 = new Person{ 175.32f, 65.2f, "David", 1, { 1.1f, 1.0f } };
+	free(persons1);
+	persons1 = nullptr;
 	person2.grade = 5; // persons[2]와 연결됨
 	person3.grade = 5; // 새로운 객체만 적용됨
 	std::cout << "person1 : 잘 나옵니다            " << persons[2].grade << "\n";
