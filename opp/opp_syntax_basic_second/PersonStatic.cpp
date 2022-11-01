@@ -1,7 +1,7 @@
 #include<iostream>
 #include "PersonStatic.h"
 
-// Çì´õ¿¡¼­ 0À¸·Î ÃÊ±âÈ­ÇÏ¸é, PersonStaticÇì´õ¸¦ includeÇÒ ‹š¸¶´Ù 0À¸·Î ÃÊ±âÈ­ µÊ
+// í—¤ë”ì—ì„œ 0ìœ¼ë¡œ ì´ˆê¸°í™”í•˜ë©´, PersonStaticí—¤ë”ë¥¼ includeí•  ë–„ë§ˆë‹¤ 0ìœ¼ë¡œ ì´ˆê¸°í™” ë¨
 int PersonStatic::num = 0;
 int PersonStatic::publicNum = 0;
 
@@ -15,5 +15,5 @@ void PersonStatic::printPerson() {
 }
 void PersonStatic::staticPrintPerson() {
 	std::cout << num << " ";
-	// private º¯¼ö´Â Á¢±Ù ºÒ°¡´É, this°¡ ¾ø±â ‹š¹®¿¡
+	// private ë³€ìˆ˜ëŠ” ì ‘ê·¼ ë¶ˆê°€ëŠ¥, thisê°€ ì—†ê¸° ë–„ë¬¸ì—
 }
