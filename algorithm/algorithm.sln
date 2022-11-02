@@ -53,6 +53,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1620_나는야포캣몬마�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1676_팩토리얼0의개수", "1676_팩토리얼0의개수\1676_팩토리얼0의개수.vcxproj", "{CE0AC6B8-D2FD-4CE9-A4BC-0F5D65C5E73A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1712_손익분기점", "1712_손익분기점\1712_손익분기점.vcxproj", "{66010D86-4B96-49E4-A9A2-0026D3D54467}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -261,6 +263,14 @@ Global
 		{CE0AC6B8-D2FD-4CE9-A4BC-0F5D65C5E73A}.Release|x64.Build.0 = Release|x64
 		{CE0AC6B8-D2FD-4CE9-A4BC-0F5D65C5E73A}.Release|x86.ActiveCfg = Release|Win32
 		{CE0AC6B8-D2FD-4CE9-A4BC-0F5D65C5E73A}.Release|x86.Build.0 = Release|Win32
+		{66010D86-4B96-49E4-A9A2-0026D3D54467}.Debug|x64.ActiveCfg = Debug|x64
+		{66010D86-4B96-49E4-A9A2-0026D3D54467}.Debug|x64.Build.0 = Debug|x64
+		{66010D86-4B96-49E4-A9A2-0026D3D54467}.Debug|x86.ActiveCfg = Debug|Win32
+		{66010D86-4B96-49E4-A9A2-0026D3D54467}.Debug|x86.Build.0 = Debug|Win32
+		{66010D86-4B96-49E4-A9A2-0026D3D54467}.Release|x64.ActiveCfg = Release|x64
+		{66010D86-4B96-49E4-A9A2-0026D3D54467}.Release|x64.Build.0 = Release|x64
+		{66010D86-4B96-49E4-A9A2-0026D3D54467}.Release|x86.ActiveCfg = Release|Win32
+		{66010D86-4B96-49E4-A9A2-0026D3D54467}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

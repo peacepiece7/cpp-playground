@@ -10,8 +10,8 @@ int n, m, che[54][54], ret = INF;
 const int dx[4] = { -1,0,1,0 };
 const int dy[4] = { 0,1,0,-1 };
 
-// 1. wbwb, bwb ¹è¿­ ¹Ì¸® ¸¸µé¾î¼­ ºê·çÆ® Æ÷½ºÇØº¸±â
-// 2. wbwb, bwbw¸¦ µÎ °¡Áö °æ¿ìÀÇ ¼ö¸¦ »ý°¢ÇØ¼­ Ç®¾î¾ß ÇÔ
+// 1. wbwb, bwb ë°°ì—´ ë¯¸ë¦¬ ë§Œë“¤ì–´ì„œ ë¸Œë£¨íŠ¸ í¬ìŠ¤í•´ë³´ê¸°
+// 2. wbwb, bwbwë¥¼ ë‘ ê°€ì§€ ê²½ìš°ì˜ ìˆ˜ë¥¼ ìƒê°í•´ì„œ í’€ì–´ì•¼ í•¨
 
 int main() {
 	scanf("%d %d", &n, &m);

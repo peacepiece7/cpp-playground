@@ -14,7 +14,7 @@ public:
 	Vector operator-() const {
 		return Vector{ -x, -y, -z };
 	}
-	void print() const // const Æ÷ÀÎÅÍ¸¦ °¡Á®¿È (voidÇüÀÌ¶óµµ ÀÎ½ºÅÏ½º°¡ const·Î ¼±¾ğµÇ¾ú´Ù¸é constºÙ¿©¾ßÇÔ) 
+	void print() const // const í¬ì¸í„°ë¥¼ ê°€ì ¸ì˜´ (voidí˜•ì´ë¼ë„ ì¸ìŠ¤í„´ìŠ¤ê°€ constë¡œ ì„ ì–¸ë˜ì—ˆë‹¤ë©´ constë¶™ì—¬ì•¼í•¨) 
 	{
 		cout << "x : " << x << ", y : " << y << ", z : " << z << '\n';
 	}
@@ -46,7 +46,7 @@ public:
 		return *this;
 	}
 	float operator*(VectorMe& v) const {
-		return x * v.x + y * v.y + z * v.z; // ¹éÅÍÀÇ ³»Á¢À» ±¸ÇÏ´Â °ø½ÄÀÌ ¿ø·¡ ÀÌ·³
+		return x * v.x + y * v.y + z * v.z; // ë°±í„°ì˜ ë‚´ì ‘ì„ êµ¬í•˜ëŠ” ê³µì‹ì´ ì›ë˜ ì´ëŸ¼
 	}
 	VectorMe operator*(float f) const {
 		return VectorMe{ x * f , y * f , z * f };
@@ -61,7 +61,7 @@ public:
 		this->x + 1;
 		this->y + 1;
 		this->z + 1;
-		return *this; // °ªÀ» ¹İÈ¯
+		return *this; // ê°’ì„ ë°˜í™˜
 	}
 	VectorMe operator++(int) {
 		VectorMe temp = *this;
@@ -77,7 +77,7 @@ Vector operator*(float f, const Vector& v) {
 }
 class VectorF;
 class VectorI {
-	friend class VectorF; // Ä£±¸ Å¬·¡½ºÇÑÅ×´Â ºñ¹ĞÀÌ ¾øÀ½
+	friend class VectorF; // ì¹œêµ¬ í´ë˜ìŠ¤í•œí…ŒëŠ” ë¹„ë°€ì´ ì—†ìŒ
 private:
 	int x;
 	int y;
@@ -93,13 +93,13 @@ public:
 
 	};
 	VectorF operator+(VectorI& v) const {
-		return VectorF{ x + v.x,y + v.y,z + v.z }; // ÀÌ°Ô ¾ÈµÈ´Ù´Âµ¥ ÀÌÀ¯´Â ¸ğ¸£°ÚÀ½.. 
-		// ÀÌ·±°Ô ÀÖ´Ù~ Á¤µµ¸¸ ¾Ë¾ÆµÎÀÚ °¡´ÉÇÏ¸é Çì´õÆÄÀÏÀ» ºĞ¸®ÇÏ°í, °­»ç ÄÚµå¸¦ º¸ÀÚ
+		return VectorF{ x + v.x,y + v.y,z + v.z }; // ì´ê²Œ ì•ˆëœë‹¤ëŠ”ë° ì´ìœ ëŠ” ëª¨ë¥´ê² ìŒ.. 
+		// ì´ëŸ°ê²Œ ìˆë‹¤~ ì •ë„ë§Œ ì•Œì•„ë‘ì ê°€ëŠ¥í•˜ë©´ í—¤ë”íŒŒì¼ì„ ë¶„ë¦¬í•˜ê³ , ê°•ì‚¬ ì½”ë“œë¥¼ ë³´ì
 	}
 };
 int main() {
 
-	cout << "1. ¿¬»êÀÚ ¿ÀÆÛ·¹ÀÌÅÍ " << "\n";
+	cout << "1. ì—°ì‚°ì ì˜¤í¼ë ˆì´í„° " << "\n";
 	Vector v0{ 0,1,2 };
 	const Vector v1{ 1,2,3 };
 
@@ -111,35 +111,35 @@ int main() {
 	v2.print();
 	v3.print();
 
-	cout << "2. Á÷Á¢ ±¸ÇöÇØº¸±â" << "\n";
+	cout << "2. ì§ì ‘ êµ¬í˜„í•´ë³´ê¸°" << "\n";
 
 	VectorMe vm0{ 0,1,2 };
 	VectorMe vm1{ 1,2,3 };
 
-	// ´ÜÇ× ¿¬»êÀÚ +, +vector => vector
+	// ë‹¨í•­ ì—°ì‚°ì +, +vector => vector
 	VectorMe vm2 = vm0 + vm1;
 	vm0 += vm1;
 	vm0.print();
 	vm2.print();
-	// ÀÌÇ× ¿¬»êÀÚ -, vector - vecotr => vector
+	// ì´í•­ ì—°ì‚°ì -, vector - vecotr => vector
 	VectorMe vm3 = vm0 - vm1;
 	vm0 -= vm1;
 	vm0.print();
-	// ÀÌÇ× ¿¬»êÀÚ *, vector * 3.0f => vector, vector * vector => float (³»Á¢)
+	// ì´í•­ ì—°ì‚°ì *, vector * 3.0f => vector, vector * vector => float (ë‚´ì ‘)
 	float innner1 = vm0 * vm1;
 	VectorMe vm4 = vm0 * 10.5f;
 	VectorMe vm5 = vm0 / 4;
 	vm0.print();
 	vm4.print();
-	// ÀÌÇ× ¿¬»êÀÚ /, vector / 3.0f => vector
-	// ÀüÀ§ ¿¬»êÀÚ ++. --. ++vector, --vector
-	// ÈÄÀ§ ¿¬»êÀÚ ++, --, vector++, vector--
+	// ì´í•­ ì—°ì‚°ì /, vector / 3.0f => vector
+	// ì „ìœ„ ì—°ì‚°ì ++. --. ++vector, --vector
+	// í›„ìœ„ ì—°ì‚°ì ++, --, vector++, vector--
 
-	cout << " 	VectorMe v7 = 3.0f * vm0 ¸¦ ÇÏ·Á¸é?" << "\n";
+	cout << " 	VectorMe v7 = 3.0f * vm0 ë¥¼ í•˜ë ¤ë©´?" << "\n";
 	VectorMe v7 = vm0 * 3.0f; // v7 = vm0.operator*(3.0f)
-	VectorMe vm7 = 3.0f * vm0; // 3.0f.operator*(vm7) => Àü¿ªÇÔ¼ö¸¦ ¸¸µé¾î¾ßÇÔ 
+	VectorMe vm7 = 3.0f * vm0; // 3.0f.operator*(vm7) => ì „ì—­í•¨ìˆ˜ë¥¼ ë§Œë“¤ì–´ì•¼í•¨ 
 
-	cout << "  x,y,z°¡ privateÀÏ °æ¿ì friend¸¦ µî·ÏÇØÁÖ¸é µÊ" << "\n";
+	cout << "  x,y,zê°€ privateì¼ ê²½ìš° friendë¥¼ ë“±ë¡í•´ì£¼ë©´ ë¨" << "\n";
 	Vector v8{ 1,2,3 };
 	Vector v9 = 3.0f * v8;
 

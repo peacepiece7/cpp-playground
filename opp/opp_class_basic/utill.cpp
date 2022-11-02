@@ -6,9 +6,9 @@
 #include<cstring>
 using namespace std;
 
-// ¶È°°ÀÌ Á¤ÀÇÇÏ¸é on definetion role¿¡ À§¹èµÇÁö ¾ÊÀ½
-// class, struct, enum µî ¸î°³°¡ ÀÌ·± ¾ÖµéÀÌ ÀÖÀ½
-// ÇÏÁö¸¸ ÀüºÎ´Ù ¹Ù²ãÁÖ´Â°Ç ³Ê¹« ±ÍÂúÀ½ -> header file
+// ë˜‘ê°™ì´ ì •ì˜í•˜ë©´ on definetion roleì— ìœ„ë°°ë˜ì§€ ì•ŠìŒ
+// class, struct, enum ë“± ëª‡ê°œê°€ ì´ëŸ° ì• ë“¤ì´ ìžˆìŒ
+// í•˜ì§€ë§Œ ì „ë¶€ë‹¤ ë°”ê¿”ì£¼ëŠ”ê±´ ë„ˆë¬´ ê·€ì°®ìŒ -> header file
 class Person
 {
 private:
@@ -17,7 +17,7 @@ private:
 	const std::string _name;
 public:
 	Person(float w, float h, const std::string name) : _w(w), _h(h), _name(name) {
-		std::cout << "PersonÅ¬·¡½º »ý¼º" << "\n";
+		std::cout << "Personí´ëž˜ìŠ¤ ìƒì„±" << "\n";
 	}
 	void print() {
 		std::cout << _name << "\n";

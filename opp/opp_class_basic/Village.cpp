@@ -1,6 +1,6 @@
 #include "Village.h"
 
-#include "PersonHeader.h" // PersonHeader ³»ºÎ¸¦ ¾Ë¾Æ¾ßÇØ¼­ includeÇÔ, (ÂüÁ¶¶ó´ø°¡ ³»ºÎ private °ªÀÌ¶ó´ø°¡ ÇÊ¿äÇØ¼­)
+#include "PersonHeader.h" // PersonHeader ë‚´ë¶€ë¥¼ ì•Œì•„ì•¼í•´ì„œ includeí•¨, (ì°¸ì¡°ë¼ë˜ê°€ ë‚´ë¶€ private ê°’ì´ë¼ë˜ê°€ í•„ìš”í•´ì„œ)
 void Village::add(PersonHeader person) {
 	persons.push_back(person);
 }

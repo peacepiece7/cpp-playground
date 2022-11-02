@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 using namespace std;
 
@@ -8,7 +8,7 @@ int sum(int, int);
 
 int main(int argc, char* argv[]) {
 	int total = 0;
-	// i[0]Àº ½ÇÇàÆÄÀÏ °æ·Î
+	// i[0]ì€ ì‹¤í–‰íŒŒì¼ ê²½ë¡œ
 	SQUARE(1);
 	for (int i = 1; i < argc; ++i) {
 		string arg(argv[i]);
@@ -20,34 +20,34 @@ int main(int argc, char* argv[]) {
 }
 
 // summary
-// 1. developer command prompt ¿­±â
-//    visual studio c++ compilterÀÓ
+// 1. developer command prompt ì—´ê¸°
+//    visual studio c++ compilterì„
 // 2. cl, link
-//    where cl, where linkÇÏ¸é path³ª¿È
-//    echo &PATH&ÇÏ¸é ½Ã½ºÅÛ È¯°æº¯¼ö ³ª¿È ( where cl, where link) È®ÀÎ°¡´É
-// 3. C:\Users\interbird\source\repos\peacepiece7\cpp-playground\syntax_basic_build °æ·Î ´ëÃæ ¾Ë¾Æ³»±â
+//    where cl, where linkí•˜ë©´ pathë‚˜ì˜´
+//    echo &PATH&í•˜ë©´ ì‹œìŠ¤í…œ í™˜ê²½ë³€ìˆ˜ ë‚˜ì˜´ ( where cl, where link) í™•ì¸ê°€ëŠ¥
+// 3. C:\Users\interbird\source\repos\peacepiece7\cpp-playground\syntax_basic_build ê²½ë¡œ ëŒ€ì¶© ì•Œì•„ë‚´ê¸°
 //    cd C:\Users\interbird\source\repos\peacepiece7\cpp-playground\syntax_basic_build
 //	  cl main.cpp utill.cpp 
-//	  cl main.cpp utill.cpp /EHsc => warning¾Ë¾Æº¸±â
+//	  cl main.cpp utill.cpp /EHsc => warningì•Œì•„ë³´ê¸°
 //    
 //	  main.exe 30 60
-//    90 ³ª¿È ¤¾¤¾
+//    90 ë‚˜ì˜´ ã…ã…
 //	  del *.cpp
 //    del *.exe
 // 
-//    ¾Æ·¡ µÎ ÁÙ ´Ù ¾ÈµÊ
+//    ì•„ë˜ ë‘ ì¤„ ë‹¤ ì•ˆë¨
 //    cl main.cpp 
 //    cl utill.cpp 
 // 
-//	  cl main.cpp utill. /c (ÄÄÆÄÀÏ¸¸ÇÏ°í link´ÂÇÏÁö¾ÊÀ½), link´Â obj¸¦ ¹­¾îÁÖ´Â ¿ªÇÒ => .exeÆÄÀÏÀÌ ³ª¿È
-//    main.cpp => ÄÄÆÄÀÏ ÇÑ °á°ú main,obj
-//	  utill.cpp => ÄÄÆÄÀÏÇÑ °á°ú utill.cpp°¡³ª¿È
+//	  cl main.cpp utill. /c (ì»´íŒŒì¼ë§Œí•˜ê³  linkëŠ”í•˜ì§€ì•ŠìŒ), linkëŠ” objë¥¼ ë¬¶ì–´ì£¼ëŠ” ì—­í•  => .exeíŒŒì¼ì´ ë‚˜ì˜´
+//    main.cpp => ì»´íŒŒì¼ í•œ ê²°ê³¼ main,obj
+//	  utill.cpp => ì»´íŒŒì¼í•œ ê²°ê³¼ utill.cppê°€ë‚˜ì˜´
 // 
 //   link main.obj utill.obj
-//   main.exe°¡ »ı¼ºµÊ
+//   main.exeê°€ ìƒì„±ë¨
 // 
 // 
 // 
-//   cl main.cpp /P => main.i°¡ »ı¼ºµÊ, ÄÄÆÄÀÏ Àü »óÅÂ (ÀĞÀ» ¼ö ÀÖÀ½ main.i ÀĞ¾îº¸±â)
-//   SQUARE(1)ÀÌ main.i´Â 1*1;·Î º¯°æµÊ
+//   cl main.cpp /P => main.iê°€ ìƒì„±ë¨, ì»´íŒŒì¼ ì „ ìƒíƒœ (ì½ì„ ìˆ˜ ìˆìŒ main.i ì½ì–´ë³´ê¸°)
+//   SQUARE(1)ì´ main.iëŠ” 1*1;ë¡œ ë³€ê²½ë¨
 // summary

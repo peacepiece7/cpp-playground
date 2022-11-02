@@ -21,7 +21,7 @@ private:
 public:
 	Person(float weight, float height, const string& name) : weight(weight), height(height), name(name) {}
 	void loseWeight(float weight) {
-		//this->height == height °°À½
+		//this->height == height ê°™ìŒ
 		this->height -= weight;
 	}
 	float getBMI() {
@@ -55,12 +55,12 @@ struct Transaction {
 			int txID = _fromID ^ _toID ^ _value;
 			return Transaction{ txID, _fromID, _toID, _value };
 		}
-		// private ¼¼ÆÃ constructor¸¦ Ã¼ÀÎ Çü½ÄÀ¸·Î ±¸Çö
-		// id¸¦ ¹Ş¾Æ¼­ ÇØ½ÌÇØ¾ß ÇÒ ¶§ À¯¿ëÇÒ 
-		// Builder& => Builder ÀÎ½ºÅÏ½ºÀÇ ÁÖ¼Ò¸¦ ¹İÈ¯
+		// private ì„¸íŒ… constructorë¥¼ ì²´ì¸ í˜•ì‹ìœ¼ë¡œ êµ¬í˜„
+		// idë¥¼ ë°›ì•„ì„œ í•´ì‹±í•´ì•¼ í•  ë•Œ ìœ ìš©í•  
+		// Builder& => Builder ì¸ìŠ¤í„´ìŠ¤ì˜ ì£¼ì†Œë¥¼ ë°˜í™˜
 		Builder& setFromID(int fromID) {
 			this->_fromID = fromID;
-			return *this; // thisÀÇ °ª (ÀÎ½ºÅÏ½º)¸¦ ¹İÈ¯ÇÏ±â ‹š¹®¿¡ ¸Ş¼­µå Ã¼ÀÌ´×À» ÇÒ ¼ö ÀÖÀ½
+			return *this; // thisì˜ ê°’ (ì¸ìŠ¤í„´ìŠ¤)ë¥¼ ë°˜í™˜í•˜ê¸° ë–„ë¬¸ì— ë©”ì„œë“œ ì²´ì´ë‹ì„ í•  ìˆ˜ ìˆìŒ
 		}
 		Builder& setToID(int toID) {
 			_toID = toID;
@@ -74,8 +74,8 @@ struct Transaction {
 };
 
 void thisPointerSummary() {
-	cout << "1. this Æ÷ÀÎÅÍ" << "\n";
-	// this => PersonÀÇ °´Ã¼ ÀÚÃ¼ÀÓ *person0ÀÎ°Í
+	cout << "1. this í¬ì¸í„°" << "\n";
+	// this => Personì˜ ê°ì²´ ìì²´ì„ *person0ì¸ê²ƒ
 	Person person0(74, 172.4f, "daniel");
 	Person person1(72, 169.3f, "alice");
 	person0.complete(person1).doCeremony();
@@ -89,25 +89,25 @@ private:
 	float _height;
 	float _weight;
 public:
-	Person1(const string& name,int height, int weight) : _name(name), _height(height), _weight(weight)// const´Â ÃÊ±âÀÚ ¸É¹ö º¯¼ö¿¡¼­ ÇÑ ¹ø ¸¸ º¯°æ °¡´É
+	Person1(const string& name,int height, int weight) : _name(name), _height(height), _weight(weight)// constëŠ” ì´ˆê¸°ì ë§´ë²„ ë³€ìˆ˜ì—ì„œ í•œ ë²ˆ ë§Œ ë³€ê²½ ê°€ëŠ¥
 	{
-		// _name = name; const¶ó º¯°æ ºÒ°¡´É
+		// _name = name; constë¼ ë³€ê²½ ë¶ˆê°€ëŠ¥
 	}
-	float getWeight(/* const Person* this */) const // const ÀÎ½ºÅÏ½º¸¸ È£Ãâ°¡´ÉÇÔ!
-		// getWeight(Person* this) const => getWeight(const Person* this)ÀÓ
+	float getWeight(/* const Person* this */) const // const ì¸ìŠ¤í„´ìŠ¤ë§Œ í˜¸ì¶œê°€ëŠ¥í•¨!
+		// getWeight(Person* this) const => getWeight(const Person* this)ì„
 	{
 		// _weight => this->_weight;
-		// _weight º¯°æÀÌ ºÒ°¡´ÉÇÔ (this°¡ °¡¸£Å°´Â °Ç ¸ğµÎ º¯°æ ¾ÈµÊ)
+		// _weight ë³€ê²½ì´ ë¶ˆê°€ëŠ¥í•¨ (thisê°€ ê°€ë¥´í‚¤ëŠ” ê±´ ëª¨ë‘ ë³€ê²½ ì•ˆë¨)
 		return _weight;
 	}
 };
 void constantSummary() {
-	// const ÀÎ½ºÅÏ½º´Â const Person thisÀÓ
+	// const ì¸ìŠ¤í„´ìŠ¤ëŠ” const Person thisì„
 	const Person1* person0 = new Person1("daniel", 55.4f, 166.6f);
-	// Person1* person1 = person0; <= constÆ÷ÀÎÅÍ¸¦ const¾Æ´Ñ ´Ù¸¥ º¯¼ö¿¡ ÇÒ´çÇÏ¸é ÇØ´ç º¯¼ö¿¡¼­ º¯°æ°¡´ÉÇÏ´Ï±î ÀÌ°Ç ºÒ°¡´ÉÇÔ
+	// Person1* person1 = person0; <= constí¬ì¸í„°ë¥¼ constì•„ë‹Œ ë‹¤ë¥¸ ë³€ìˆ˜ì— í• ë‹¹í•˜ë©´ í•´ë‹¹ ë³€ìˆ˜ì—ì„œ ë³€ê²½ê°€ëŠ¥í•˜ë‹ˆê¹Œ ì´ê±´ ë¶ˆê°€ëŠ¥í•¨
 	person0->getWeight();
 	Person1* person1 = new Person1("ddd", 55.5f, 4544.4f);
-	// person1.getWeight() : Person* thisÀÎµ¥, person1.getWeight() : const Person* thisÀÌ°Å¸¸ ¹ŞÀ» ¼ö ÀÖÀ½
+	// person1.getWeight() : Person* thisì¸ë°, person1.getWeight() : const Person* thisì´ê±°ë§Œ ë°›ì„ ìˆ˜ ìˆìŒ
 }
 #include "personStatic.h"
 void staticMemberSummary() {
@@ -117,15 +117,15 @@ void staticMemberSummary() {
 	PersonStatic p1;
 	p0.printPerson();
 
-	cout << "1. static member Æ¯Â¡" << "\n";
-	// Á¢±Ù Á¦ÇÑÀÌ PersonStaticÀ¸·Î µÇ¾î ÀÖ´Â Àü¿ªº¯¼ö Å¬·¡½º¿¡¼­ public¹Ù·Î Á¢±Ù °¡´ÉÇÔ!
+	cout << "1. static member íŠ¹ì§•" << "\n";
+	// ì ‘ê·¼ ì œí•œì´ PersonStaticìœ¼ë¡œ ë˜ì–´ ìˆëŠ” ì „ì—­ë³€ìˆ˜ í´ë˜ìŠ¤ì—ì„œ publicë°”ë¡œ ì ‘ê·¼ ê°€ëŠ¥í•¨!
 	cout << PersonStatic::publicNum << "\n";
-	// ¸É¹öÇÔ¼öµµ staticÀÌ¸é Á¢±Ù °¡´É
-	// static ÇÔ¼ö´Â static¸¸ Á¢±Ù°¡´É, ±× ¿Ü ¸É¹öÇÔ¼ö, º¯¼ö¿¡ Á¢±ÙÇÒ ¼ö ¾øÀ½(this°¡ ³Ñ¾î°¡Áö ¾Ê±â¶§¹®¿¡ (»ı¼ºÀÚ°¡ ¾øÀ»‹š ¼±¾ğÇÏ´Ï±î, ±¸Ã¼È­°¡ ¾ÈµÇ¼­))
+	// ë§´ë²„í•¨ìˆ˜ë„ staticì´ë©´ ì ‘ê·¼ ê°€ëŠ¥
+	// static í•¨ìˆ˜ëŠ” staticë§Œ ì ‘ê·¼ê°€ëŠ¥, ê·¸ ì™¸ ë§´ë²„í•¨ìˆ˜, ë³€ìˆ˜ì— ì ‘ê·¼í•  ìˆ˜ ì—†ìŒ(thisê°€ ë„˜ì–´ê°€ì§€ ì•Šê¸°ë•Œë¬¸ì— (ìƒì„±ìê°€ ì—†ì„ë–„ ì„ ì–¸í•˜ë‹ˆê¹Œ, êµ¬ì²´í™”ê°€ ì•ˆë˜ì„œ))
 	PersonStatic::staticPrintPerson();
 
 	
 }
 void memberFunctionPotinerSummary() {
-	// .... °³¾î·Æ ...
+	// .... ê°œì–´ë µ ...
 }

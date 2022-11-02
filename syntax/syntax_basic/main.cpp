@@ -1,4 +1,4 @@
-#pragma warning(disable:4996)
+ï»¿#pragma warning(disable:4996)
 #include<iostream>
 #include<string>
 #include<array>
@@ -39,25 +39,25 @@ int main(int argc, char* argv[]) {
 	// functionPointerSummary();
 }
 void charSummary() {
-	// ¹®ÀÚ¿­ÀÇ ³¡ = '\0'
+	// ë¬¸ìì—´ì˜ ë = '\0'
 	char str1[] = "abc";
 	std::cout << str1[1] << "\n";
 	std::cout << strlen(str1) << "\n";
 
-	std::cout << "\n¹®ÀÚ¿­ºñ±³\n";
+	std::cout << "\në¬¸ìì—´ë¹„êµ\n";
 	char str2[] = "abc";
 	char str3[] = "abc";
 	char str4[] = "dcf";
 	if (str2 == str3) printf("%s", "true"); // false;
 
-	// strcpy strcat strcmp´Â ¾µÀÏ ¾øÀ»µí..
-	std::cout << strcmp(str2, str3) << std::endl; // °°À½ 0
-	std::cout << strcmp(str3, str4) << std::endl; // ´Ù¸§ -1
+	// strcpy strcat strcmpëŠ” ì“¸ì¼ ì—†ì„ë“¯..
+	std::cout << strcmp(str2, str3) << std::endl; // ê°™ìŒ 0
+	std::cout << strcmp(str3, str4) << std::endl; // ë‹¤ë¦„ -1
 
-	// strcpy(str2,str3) cÀÎµ¥ ÀÌ°Å ¸Ş¸ğ¸® Ä§¹üÇÒ ¼ö ÀÖÀ½
-	// strcat(str2, str3); ÀÌ°Íµµ cÀÎµ¥ ¿¡·¯³²
+	// strcpy(str2,str3) cì¸ë° ì´ê±° ë©”ëª¨ë¦¬ ì¹¨ë²”í•  ìˆ˜ ìˆìŒ
+	// strcat(str2, str3); ì´ê²ƒë„ cì¸ë° ì—ëŸ¬ë‚¨
 
-	std::cout << "\n¹®ÀÚ¿­À» ¼ıÀÚ·Î\n";
+	std::cout << "\në¬¸ìì—´ì„ ìˆ«ìë¡œ\n";
 	char stri1[] = "1";
 	char stri2[] = "1.1";
 	int i = atoi(stri1); // ascii to int
@@ -68,36 +68,36 @@ void charSummary() {
 }
 void stringSummary() {
 	std::string str;
-	// cin >> str; helloooooooo ±æ°Ô ¹Ş¾Æµµ ¹«°ü
-	printf("%s", "1. ¹®ÀÚ¿­ ºñ±³\n");
+	// cin >> str; helloooooooo ê¸¸ê²Œ ë°›ì•„ë„ ë¬´ê´€
+	printf("%s", "1. ë¬¸ìì—´ ë¹„êµ\n");
 	std::string str1("abc");
 	std::string str2("abc");
-	if (str1 == str2) std::cout << "True" << "\n"; // °¡´É
+	if (str1 == str2) std::cout << "True" << "\n"; // ê°€ëŠ¥
 	str1 += str2;
 	std::cout << str1 << "\n";
 
 	std::string str3("cdf");
 	std::string str4("hij");
 
-	printf("%s", "2. stringÀ» char·Î º¯È¯ ÈÄ strcmp»ç¿ëÇÏ±â\n");
+	printf("%s", "2. stringì„ charë¡œ ë³€í™˜ í›„ strcmpì‚¬ìš©í•˜ê¸°\n");
 	int result = strcmp(str3.c_str(), str4.c_str());
 	std::cout << result << "\n";
 
-	printf("%s", "3. string »çÀÌÁî\n");
+	printf("%s", "3. string ì‚¬ì´ì¦ˆ\n");
 	std::cout << str3.length() << " " << str3.size() << "\n";
 
-	printf("%s", "4. ¼ıÀÚ¸¦ stringÀ¸·Î\n");
+	printf("%s", "4. ìˆ«ìë¥¼ stringìœ¼ë¡œ\n");
 
 	std::string str5 = std::to_string(123);
 	std::string str6 = std::to_string(123.234);
 
 
-	std::cout << std::fixed; // <= ¼Ò¼öÁ¡ °íÁ¤ÇØµµ str6´Â 123.234000ÀÓ
+	std::cout << std::fixed; // <= ì†Œìˆ˜ì  ê³ ì •í•´ë„ str6ëŠ” 123.234000ì„
 	std::cout.precision(3);
 
 	std::cout << str5 << " " << std::to_string(true) << " " << str6 << " " << str6[5] << "\n";
 
-	std::cout << "\n¹®ÀÚ¿­À» ¼ıÀÚ·Î\n";
+	std::cout << "\në¬¸ìì—´ì„ ìˆ«ìë¡œ\n";
 	int num2 = std::stoi("1");// string to int
 	float num3 = std::stof("1.1");// string to int
 	std::cout << num2 << " " << num3 << "\n";
@@ -125,34 +125,34 @@ void structSummary() {
 		person.grade << " " <<
 		person.eyeSight.left << " " <<
 		person.eyeSight.right << "\n";
-	Person person1 = person; //  struct ÇÒ´ç °¡´É
-	// if (person == person1) operator overloadingÀÌ ÇÊ¿ä
+	Person person1 = person; //  struct í• ë‹¹ ê°€ëŠ¥
+	// if (person == person1) operator overloadingì´ í•„ìš”
 
 	Person persons[5];
-	Person& person2 = persons[2]; // ÂüÁ¶ ÁÖ¼Ò¸¦ °¡Á®¿È
-	Person person3 = persons[3]; // »õ·Î¿î °´Ã¼°¡ »ı¼º
+	Person& person2 = persons[2]; // ì°¸ì¡° ì£¼ì†Œë¥¼ ê°€ì ¸ì˜´
+	Person person3 = persons[3]; // ìƒˆë¡œìš´ ê°ì²´ê°€ ìƒì„±
 	Person* persons1 = new Person{ 175.32f, 65.2f, "David", 1, { 1.1f, 1.0f } };
 	free(persons1);
 	persons1 = nullptr;
-	person2.grade = 5; // persons[2]¿Í ¿¬°áµÊ
-	person3.grade = 5; // »õ·Î¿î °´Ã¼¸¸ Àû¿ëµÊ
-	std::cout << "person1 : Àß ³ª¿É´Ï´Ù            " << persons[2].grade << "\n";
-	std::cout << "person2 : Á¤ÀÇµÇ¾î ÀÖÁö ¾Ê½À´Ï´Ù " << persons[3].grade << "\n";
+	person2.grade = 5; // persons[2]ì™€ ì—°ê²°ë¨
+	person3.grade = 5; // ìƒˆë¡œìš´ ê°ì²´ë§Œ ì ìš©ë¨
+	std::cout << "person1 : ì˜ ë‚˜ì˜µë‹ˆë‹¤            " << persons[2].grade << "\n";
+	std::cout << "person2 : ì •ì˜ë˜ì–´ ìˆì§€ ì•ŠìŠµë‹ˆë‹¤ " << persons[3].grade << "\n";
 
-	//* ¸Ş¸ğ¸® È¿À²¿¡ ´ëÇÑ Ãß°¡ Á¤º¸
-	// ÀÚÀåÅ« ÀÚ·áÇüÀ¸·Î btye¸¦ ¸ÂÃã
+	//* ë©”ëª¨ë¦¬ íš¨ìœ¨ì— ëŒ€í•œ ì¶”ê°€ ì •ë³´
+	// ìì¥í° ìë£Œí˜•ìœ¼ë¡œ btyeë¥¼ ë§ì¶¤
 	struct aligntest1 {
 		float a;   // 4 => 4
 		short b;   // 2 => 2(2)
 		float c;   // 4 => 4
-		char d[10];// 2 => 10(2) ->4ÀÇ ¹è¼ö¿©¾ßÇÏ´Âµ¥ 22¶ó¼­(2)Ãß°¡
+		char d[10];// 2 => 10(2) ->4ì˜ ë°°ìˆ˜ì—¬ì•¼í•˜ëŠ”ë° 22ë¼ì„œ(2)ì¶”ê°€
 		// => 24btye
 	};
 	std::cout << "aligntest1 :" << sizeof(aligntest1) << "\n";
 	struct aligntest2 {
 		float a;   // 4 => 4
 		float c;   // 4 => 4
-		char d[10];// 10 => 10 // char´Â 1btye * 10°³ => 18
+		char d[10];// 10 => 10 // charëŠ” 1btye * 10ê°œ => 18
 		short b;   // 2 => 2
 		// => 20byte
 	};
@@ -174,8 +174,8 @@ void structSummary() {
 	return;
 }
 void unionSummary() {
-	std::cout << "union == ¿©·¯ Å¸ÀÔÀÇ ¼Ó¼º Áß ÇÏ³ª¸¸ ÇÊ¿äÇÒ °æ¿ì" << "\n";
-	// !! .idChars¾²·Á¸é ,¼Ó¼º => ±¸¼º ¼Ó¼º ÀÏ¹İ => C++¾ğ¾îÇ¥ÁØ ÃÖ½ÅÀ¸·Î !!
+	std::cout << "union == ì—¬ëŸ¬ íƒ€ì…ì˜ ì†ì„± ì¤‘ í•˜ë‚˜ë§Œ í•„ìš”í•  ê²½ìš°" << "\n";
+	// !! .idCharsì“°ë ¤ë©´ ,ì†ì„± => êµ¬ì„± ì†ì„± ì¼ë°˜ => C++ì–¸ì–´í‘œì¤€ ìµœì‹ ìœ¼ë¡œ !!
 	union ID {
 		int idInteger;
 		char idChars[10];
@@ -190,29 +190,29 @@ void unionSummary() {
 		int idType;
 		ID id;
 	};
-	std::cout << "unionÀ» »ç¿ëÇÏÁö ¾ÊÀ» °æ¿ì" << "\n";
+	std::cout << "unionì„ ì‚¬ìš©í•˜ì§€ ì•Šì„ ê²½ìš°" << "\n";
 	Product1 item1 = { 1, 12 };
-	if (item1.idType == 0) std::cout << item1.idInteger << "\n"; // idÀÇ typeÀÌ intÀÎÁö char Ã£¾Æº¸Áö ¾ÊÀ¸¸é ¾Ë ¼ö ¾øÀ½
+	if (item1.idType == 0) std::cout << item1.idInteger << "\n"; // idì˜ typeì´ intì¸ì§€ char ì°¾ì•„ë³´ì§€ ì•Šìœ¼ë©´ ì•Œ ìˆ˜ ì—†ìŒ
 	else std::cout << item1.idChars << "\n";
 
-	std::cout << "unionÀ» »ç¿ëÇÏ¸é ¾Æ·¡¿Í °°ÀÌ »ç¿ëÇÒ ¼ö ÀÖÀ½" << "\n";
-	Product2 item2 = { 2, {.idChars = "abc"} }; // ¸¸µé ¶§ºÎÅÍ int, char¸¦ ±¸ºĞÇØ¼­ ¸¸µé¾î µÒ
+	std::cout << "unionì„ ì‚¬ìš©í•˜ë©´ ì•„ë˜ì™€ ê°™ì´ ì‚¬ìš©í•  ìˆ˜ ìˆìŒ" << "\n";
+	Product2 item2 = { 2, {.idChars = "abc"} }; // ë§Œë“¤ ë•Œë¶€í„° int, charë¥¼ êµ¬ë¶„í•´ì„œ ë§Œë“¤ì–´ ë‘ 
 	Product2 item3 = { 3, {.idInteger = 13} };
 	if (item2.idType == 2) std::cout << item2.id.idChars << "\n";
 	else std::cout << item3.id.idInteger << "\n";
 
-	std::cout << "union¾È¿¡¼­ alignÀÌ ¸ÂÃçÁ®¼­ padding(»ç¿ëÇÏÁö ¾Ê´Â btye)ÀÌ ´õ ÀÛ½À´Ï´Ù\n";
+	std::cout << "unionì•ˆì—ì„œ alignì´ ë§ì¶°ì ¸ì„œ padding(ì‚¬ìš©í•˜ì§€ ì•ŠëŠ” btye)ì´ ë” ì‘ìŠµë‹ˆë‹¤\n";
 	std::cout << sizeof(Product1) << " " << sizeof(Product2) << "\n";// 20 16 (p
 }
 void unscopedEnumSummary() {
-	// typeÀ» ¹Ì¸® ¾Ë ¼ö ¾ø´Ù = enum
-	// typeÀ» ¾Ë ¼ö ÀÖ´Ù = struct 
+	// typeì„ ë¯¸ë¦¬ ì•Œ ìˆ˜ ì—†ë‹¤ = enum
+	// typeì„ ì•Œ ìˆ˜ ìˆë‹¤ = struct 
 	enum Color1 {
-		Red, Blue, Green, Alpha, SIZE // 1, 2, 3, 4, 5ÀÇ °ªÀ» default·Î °¡Áö´Â °Å °°À½
+		Red, Blue, Green, Alpha, SIZE // 1, 2, 3, 4, 5ì˜ ê°’ì„ defaultë¡œ ê°€ì§€ëŠ” ê±° ê°™ìŒ
 	};
 
 	int colors1[Color1::SIZE] = { 244,255,123 };
-	// ¸¶Áö¸· 0Àº Alpha°¡ Á¤ÀÇµÇÁö ¾Ê¾Æ¼­ 0ÀÓ
+	// ë§ˆì§€ë§‰ 0ì€ Alphaê°€ ì •ì˜ë˜ì§€ ì•Šì•„ì„œ 0ì„
 	for (int i = 0; i < SIZE; i++) std::cout << colors1[i] << " ";
 	std::cout << "\n";
 	colors1[Alpha] = 444;
@@ -223,7 +223,7 @@ void unscopedEnumSummary() {
 	};
 	Color2 colors2 = { 255,254,253,111 };
 
-	std::cout << "ÅØ½ºÆ®¿¡ ¿©·¯ ¼Ó¼º Ãß°¡ÇÏ±â" << "\n";
+	std::cout << "í…ìŠ¤íŠ¸ì— ì—¬ëŸ¬ ì†ì„± ì¶”ê°€í•˜ê¸°" << "\n";
 	enum TextAttribute {
 		// 1 2 4 8
 		Bold = 0b0001,
@@ -232,16 +232,16 @@ void unscopedEnumSummary() {
 		Strikethrough = 0b1000
 	};
 	int textAttrs = 0;
-	textAttrs |= TextAttribute::Bold; // ¹üÀ§ÁöÁ¤ ¿¬»êÀÚ, scopeÁöÁ¤°¡´É, c++11ºÎÅÍ Áö¿ø
+	textAttrs |= TextAttribute::Bold; // ë²”ìœ„ì§€ì • ì—°ì‚°ì, scopeì§€ì •ê°€ëŠ¥, c++11ë¶€í„° ì§€ì›
 	textAttrs |= Underline;
 
-	std::cout << "textAttrs¿¡ italicÀÌ ÀÖ³ª¿ä? : ";
+	std::cout << "textAttrsì— italicì´ ìˆë‚˜ìš”? : ";
 	if (textAttrs & Italic) std::cout << "YES\n";
 	else std::cout << "NO\n";
-	std::cout << "textAttrs¿¡ Bold°¡ ÀÖ³ª¿ä? : ";
+	std::cout << "textAttrsì— Boldê°€ ìˆë‚˜ìš”? : ";
 	if (textAttrs & Bold) std::cout << "YES\n";
 	else std::cout << "NO\n";
-	std::cout << "textAttrsÀÇ °ªÀº? : 0b0011 = ";
+	std::cout << "textAttrsì˜ ê°’ì€? : 0b0011 = ";
 	std::cout << textAttrs << "\n";
 }
 void scopedEnumSummary() {
@@ -260,31 +260,31 @@ void scopedEnumSummary() {
 		Underline = 4,
 	};
 	int a1 = 0;
-	std::cout << "scoped´Â Çü º¯È¯ÀÌ ÇÊ¼ö\n";
+	std::cout << "scopedëŠ” í˜• ë³€í™˜ì´ í•„ìˆ˜\n";
 	// a1 |= scopedAttribute::Bold => Error!
 	a1 |= (int)scopedAttribute::Bold; // Works!
 	int sum1 = Bar + (int)scopedAttribute::Underline;
 
-	std::cout << "unscoped´Â Çü º¯È¯ÀÌ ÇÊ¼ö°¡ ¾Æ´Ô\n";
+	std::cout << "unscopedëŠ” í˜• ë³€í™˜ì´ í•„ìˆ˜ê°€ ì•„ë‹˜\n";
 	// int sum =  Bold + Underline => Error!
 	int sum = Bar + unscopedEnumFoo::Foo; // Works!
 
 
-	std::cout << "enumÀ¸·Î ¹è¿­ÀÇ »çÀÌÁî Á¤ÇÏ±â\n";
+	std::cout << "enumìœ¼ë¡œ ë°°ì—´ì˜ ì‚¬ì´ì¦ˆ ì •í•˜ê¸°\n";
 	int scopedColors[(int)scopedColor::SIZE] = { 255,128,64 }; // String type Good!
-	// int unscopedColor[SIZE] = { 255,128,64 }; // SIZEÀÇ Çü && ÀÌ¸§ÀÇ Áßº¹ ¹®Á¦
+	// int unscopedColor[SIZE] = { 255,128,64 }; // SIZEì˜ í˜• && ì´ë¦„ì˜ ì¤‘ë³µ ë¬¸ì œ
 
-	std::cout << "ºñÆ®¿¬»êÀÚ\n";
-	enum class textAttribute : int64_t { // ÀÛ°Ô ¾´´Ù¸é int16_t
+	std::cout << "ë¹„íŠ¸ì—°ì‚°ì\n";
+	enum class textAttribute : int64_t { // ì‘ê²Œ ì“´ë‹¤ë©´ int16_t
 		Bold = 1, Italic = 2, Underline = 4,
 		SuperText = 8589934592 // 2^33
 	};
 	long long textAttrs = 0;
 	textAttrs |= (int64_t)textAttribute::SuperText;
 	textAttrs |= (int)textAttribute::Bold;
-	std::cout << "32bit·Î Ç¥ÇöÇÒ ¼ö ¾ø´Â ¼ıÀÚÀÏ °æ¿ì : " << textAttrs << "\n"; // 8589934592 + 1
+	std::cout << "32bitë¡œ í‘œí˜„í•  ìˆ˜ ì—†ëŠ” ìˆ«ìì¼ ê²½ìš° : " << textAttrs << "\n"; // 8589934592 + 1
 
-	std::cout << "if¹®À¸·Î »ç¿ë °¡´É\n";
+	std::cout << "ifë¬¸ìœ¼ë¡œ ì‚¬ìš© ê°€ëŠ¥\n";
 	enum struct Colors {
 		Red, Green, Blue,
 	};
@@ -300,7 +300,7 @@ void scopedEnumSummary() {
 	;
 }
 void array1Summary() {
-	std::cout << "¹è¿­ ¼±¾ğ" << "\n";
+	std::cout << "ë°°ì—´ ì„ ì–¸" << "\n";
 	int nums[3]{ 1,2,3 };
 	int nums1[]{ 1,2,3 };
 	std::cout << "sizeof :" << sizeof(nums) << "\n";
@@ -309,15 +309,15 @@ void array1Summary() {
 	for (auto i : nums) std::cout << i << "\n";
 	for (auto i : nums1) std::cout << i << "\n";
 
-	std::cout << "¹è¿­ º¹»ç" << "\n";
+	std::cout << "ë°°ì—´ ë³µì‚¬" << "\n";
 	int nums2[]{ 1,2,3 };
 	int nums3[]{ 4,5,6 };
 	memcpy(&nums2, &nums3, sizeof(nums2));
-	// memcpy(nums2, nums3, sizeof(nums2)); ÁÖ¼Ò°ª À§¿Í °°À½
-	// copy(nums2, nums3 + 3 , nums2);  // integer pointer, +1´ç 4btye¸¦ ´õÇÔ => num3½ÃÀÛÁ¡ ~ num3½ÃÀÛÁ¡ + 12btye
+	// memcpy(nums2, nums3, sizeof(nums2)); ì£¼ì†Œê°’ ìœ„ì™€ ê°™ìŒ
+	// copy(nums2, nums3 + 3 , nums2);  // integer pointer, +1ë‹¹ 4btyeë¥¼ ë”í•¨ => num3ì‹œì‘ì  ~ num3ì‹œì‘ì  + 12btye
 	for (auto i : nums2) std::cout << i << "\n";
 
-	std::cout << "È¦¼ö ¸ğµÎ ´õÇÏ±â" << "\n";
+	std::cout << "í™€ìˆ˜ ëª¨ë‘ ë”í•˜ê¸°" << "\n";
 	int nums5[] = { 1,2,3,1,2,3,1,2 };
 	int ret = 0;
 	for (int i = 0; i < std::size(nums5); i++) ret ^= nums5[i];
@@ -333,7 +333,7 @@ void array1Summary() {
 	}
 	for (auto i : nums5) std::cout << i << "\n";
 
-	std::cout << "¸ÅÆ®¸¯½º º¹»ç" << "\n";
+	std::cout << "ë§¤íŠ¸ë¦­ìŠ¤ ë³µì‚¬" << "\n";
 	int matrix[3][3] = {
 		{1,2,3}, {4,5,6},{7,8,9}
 	};
@@ -341,11 +341,11 @@ void array1Summary() {
 	int matrix1[3][3] = {};
 	std::cout << sizeof(matrix) << "\n";
 	memcpy(&matrix1, &matrix, sizeof(matrix));
-	std::copy(&matrix[0][0], &matrix[0][0] + 3 * 3, &matrix1[0][0]); // fillµµ °°À½
+	std::copy(&matrix[0][0], &matrix[0][0] + 3 * 3, &matrix1[0][0]); // fillë„ ê°™ìŒ
 
-	std::cout << "¸ÅÆ®¸¯½º ¸Ş¸ğ¸® ÃÊ±âÈ­" << "\n";
+	std::cout << "ë§¤íŠ¸ë¦­ìŠ¤ ë©”ëª¨ë¦¬ ì´ˆê¸°í™”" << "\n";
 	memset(&matrix, 0, sizeof(&matrix)); // 0 or 1
-	std::fill(&matrix[0][0], &matrix[0][0] + 3 * 3, 0); // ´ëºÎºĞ °¡´É
+	std::fill(&matrix[0][0], &matrix[0][0] + 3 * 3, 0); // ëŒ€ë¶€ë¶„ ê°€ëŠ¥
 
 	return;
 }
@@ -354,14 +354,14 @@ void array2Summary() {
 	std::array<int, 1000> arr1 = { 1,2,3 };
 	int arr2[1000] = { 1,2,3 };
 
-	std::cout << "1. atÀ¸·Î ¼±¾ğÇÏ¸é ¸±¸®Áî½Ã ¹üÀ§ Ã¼Å©" << "\n";
+	std::cout << "1. atìœ¼ë¡œ ì„ ì–¸í•˜ë©´ ë¦´ë¦¬ì¦ˆì‹œ ë²”ìœ„ ì²´í¬" << "\n";
 	std::cout << arr1.at(0) << std::endl;
-	// std::cout << arr2.at(1) << "\n"; Error! atÀÌ Á¸ÀçÇÏÁö ¾ÊÀ½
+	// std::cout << arr2.at(1) << "\n"; Error! atì´ ì¡´ì¬í•˜ì§€ ì•ŠìŒ
 
-	std::cout << "2. size Ã¼Å©ÇÏ±â" << "\n";
+	std::cout << "2. size ì²´í¬í•˜ê¸°" << "\n";
 	std::cout << arr1.size() << " " << sizeof(arr2) / sizeof(int) << "\n";
 
-	std::cout << "3. front, back ±¸ÇÏ±â" << "\n";
+	std::cout << "3. front, back êµ¬í•˜ê¸°" << "\n";
 	std::cout << arr1.front() << arr2[0] << "\n";
 	std::cout << arr1.back() << arr1[arr1.size() - 1] << arr2[(sizeof(arr2) / sizeof(int)) - 1] << "\n";
 
@@ -374,18 +374,18 @@ void array2Summary() {
 	std::cout << std::endl;
 	for (auto i : a1) std::cout << i << " ";
 
-	std::cout << "4. ±æÀÌ°¡ °°Àº ¹è¿­ÀÏ °æ¿ì asignment, ºñ±³ °¡´É" << "\n";
-	if (a2 > a1) std::cout << "a2[0] °¡ a[0]º¸´Ù Å­ °°´Ù¸é ´ÙÀ½ ¿ø¼Ò ºñ±³\n";
+	std::cout << "4. ê¸¸ì´ê°€ ê°™ì€ ë°°ì—´ì¼ ê²½ìš° asignment, ë¹„êµ ê°€ëŠ¥" << "\n";
+	if (a2 > a1) std::cout << "a2[0] ê°€ a[0]ë³´ë‹¤ í¼ ê°™ë‹¤ë©´ ë‹¤ìŒ ì›ì†Œ ë¹„êµ\n";
 	a2 = a1;
 	for (auto i : a1) std::cout << i << " ";
 	std::cout << std::endl;
 	if (a1 == a2) std::cout << "a2 is a1";
 
-	std::cout << "5. ¹è¿­ÀÇ ÁÖ¼Ò Á¢±Ù" << "\n";
+	std::cout << "5. ë°°ì—´ì˜ ì£¼ì†Œ ì ‘ê·¼" << "\n";
 	std::cout << a1.data() << "\n";
 	std::cout << a1.data()[0] << "\n";
 
-	// ±×¿Ü
+	// ê·¸ì™¸
 	std::array<std::string, 5> a3 = { "Hello, world!", "foo" };
 	std::array<char, 4> a4 = { "bar" };
 	std::array<std::pair<int, int>, 5> a5 = { makePair(1,2),makePair(3,4) ,std::pair<int,int>(5,6) };
@@ -404,10 +404,10 @@ void array3Summary() {
 		Person(77.7f, 180.5f)
 	};
 
-	std::cout << "1. rang-based for´Â °ªÀ» °¡Á®¿Â´Ù." << "\n";
-	for (Person person : persons) { // for (Person& person : persons) => ÀÌ·¸°Ô ÁÖ¼Ò¸¦ °¡Á®¿À¸é º¯ÇÔ
+	std::cout << "1. rang-based forëŠ” ê°’ì„ ê°€ì ¸ì˜¨ë‹¤." << "\n";
+	for (Person person : persons) { // for (Person& person : persons) => ì´ë ‡ê²Œ ì£¼ì†Œë¥¼ ê°€ì ¸ì˜¤ë©´ ë³€í•¨
 		std::cout << person.weight << " ";
-		person.weight = 0; // weight´Â °ªÀÌ¶ó¼­ persons[i].weight¿¡ ¿µÇâÀ» ÁÖÁö ¸øÇÔ
+		person.weight = 0; // weightëŠ” ê°’ì´ë¼ì„œ persons[i].weightì— ì˜í–¥ì„ ì£¼ì§€ ëª»í•¨
 	};
 	std::cout << "\n";
 	std::cout << "rang-based for 1 : " << "\n";
@@ -415,7 +415,7 @@ void array3Summary() {
 		std::cout << person.weight << " ";
 	};
 	std::cout << "\n";
-	std::cout << "ÀÏ¹İ for¹®À¸·Î persons[i].weight¸¦ °Çµé¸é ÂüÁ¶ ÁÖ¼Ò¸¦ °¡Á®¿Í¼­ °ªÀÌ ¿µ±¸ÀûÀ¸·Î º¯ÇÔ : " << "\n";
+	std::cout << "ì¼ë°˜ forë¬¸ìœ¼ë¡œ persons[i].weightë¥¼ ê±´ë“¤ë©´ ì°¸ì¡° ì£¼ì†Œë¥¼ ê°€ì ¸ì™€ì„œ ê°’ì´ ì˜êµ¬ì ìœ¼ë¡œ ë³€í•¨ : " << "\n";
 	for (int i = 0; i < sizeof(persons) / sizeof(Person); i++) {
 		persons[i].weight = 0;
 	}
@@ -427,41 +427,41 @@ void array3Summary() {
 
 void pointerBasicSummary() {
 	/* ***************************************************
-	 pointer = ¸Ş¸ğ¸® ÁÖ¼Ò¸¦ °¡Áö°í ÀÖ´Â º¯¼ö
+	 pointer = ë©”ëª¨ë¦¬ ì£¼ì†Œë¥¼ ê°€ì§€ê³  ìˆëŠ” ë³€ìˆ˜
 	 int p =  1995 : (address)aaaazx123
 	 int* p = (value)aaaazx123  : (memory adress)ex123a12asd
 	*************************************************** */
 
 	/*
-	1. *val => °ªÀ» °¡¸£Å´, &val => ÁÖ¼Ò¸¦ ±â¸£Å´
-	2. pointer = ÁÖ¼Ò¸¦ °¡¸£Å°´Â °ªÀ» °¡Áü
+	1. *val => ê°’ì„ ê°€ë¥´í‚´, &val => ì£¼ì†Œë¥¼ ê¸°ë¥´í‚´
+	2. pointer = ì£¼ì†Œë¥¼ ê°€ë¥´í‚¤ëŠ” ê°’ì„ ê°€ì§
 	3. int* pointer = &val; *&val == *pointer
 	*/
 
-	std::cout << "1.¸Ş¸ğ¸®ÀÇ ÁÖ¼Ò, Æ÷ÀÎÅÍ => º¯¼öÀÇ ÁÖ¼Ò¸¦ °ªÀ¸·Î °¡Áü, º¯¼öÀÇ ÁÖ¼Ò, º¯¼öÀÇ °ª" << "\n";
+	std::cout << "1.ë©”ëª¨ë¦¬ì˜ ì£¼ì†Œ, í¬ì¸í„° => ë³€ìˆ˜ì˜ ì£¼ì†Œë¥¼ ê°’ìœ¼ë¡œ ê°€ì§, ë³€ìˆ˜ì˜ ì£¼ì†Œ, ë³€ìˆ˜ì˜ ê°’" << "\n";
 	int num = 147;
 	int num2 = 147;
-	int* pointer = &num; // °ªÀ¸·Î ÁÖ¼Ò¸¦ °¡Áú ‹ Å¸ÀÔÀ» int*À¸·Î ¼±¾ğÇØ¾ß ÇÔ
-	std::cout << "numÀÇ value : " << num << "\n";
-	std::cout << "numÀÇ address : " << &num << "\n";
-	std::cout << "pointerÀÇ value : " << pointer << " = " << &num << "\n";
-	std::cout << "potinerÀÇ address : " << &pointer << "\n";
+	int* pointer = &num; // ê°’ìœ¼ë¡œ ì£¼ì†Œë¥¼ ê°€ì§ˆ ë–ˆ íƒ€ì…ì„ int*ìœ¼ë¡œ ì„ ì–¸í•´ì•¼ í•¨
+	std::cout << "numì˜ value : " << num << "\n";
+	std::cout << "numì˜ address : " << &num << "\n";
+	std::cout << "pointerì˜ value : " << pointer << " = " << &num << "\n";
+	std::cout << "potinerì˜ address : " << &pointer << "\n";
 
-	std::cout << "2. ¿ªÂüÁ¶, dereferencing" << "\n";
+	std::cout << "2. ì—­ì°¸ì¡°, dereferencing" << "\n";
 	*pointer = 0; // *pointer == *&num
 	if (num != num2) std::cout << num << "\n";
-	std::cout << *&num << "\n"; //(ÁÖ¼Ò)&num°¡ °¡¸£Å°´Â °ª == *&num
+	std::cout << *&num << "\n"; //(ì£¼ì†Œ)&numê°€ ê°€ë¥´í‚¤ëŠ” ê°’ == *&num
 
 	std::cout << "3. warning : undefined behiver" << "\n";
 	int* pnum = 0;
 	// pnum = NULL;
-	std::cout << "ÁÖ¼Ò¸¦ °¡¸£Å°´Â °ª : " << pnum << "\n";
-	// std::cout << "ÁÖ¼Ò°¡ °¡Áö°í ÀÖ´Â °ª : " << *pnum << "\n";// ERROR! ¿¢¼¼½ºÀ§¹İ nullptr
-	std::cout << "0ÀÌ¶ó´Â ÁÖ¼Ò °ªÀÌ °¡¸£Å°°í ÀÖ´Â ¸Ş¸ğ¸®ÀÇ ÁÖ¼Ò :" << &pnum << "\n";
+	std::cout << "ì£¼ì†Œë¥¼ ê°€ë¥´í‚¤ëŠ” ê°’ : " << pnum << "\n";
+	// std::cout << "ì£¼ì†Œê°€ ê°€ì§€ê³  ìˆëŠ” ê°’ : " << *pnum << "\n";// ERROR! ì—‘ì„¸ìŠ¤ìœ„ë°˜ nullptr
+	std::cout << "0ì´ë¼ëŠ” ì£¼ì†Œ ê°’ì´ ê°€ë¥´í‚¤ê³  ìˆëŠ” ë©”ëª¨ë¦¬ì˜ ì£¼ì†Œ :" << &pnum << "\n";
 
-	std::cout << "4. int* pointer¿¡¼­ intÀÇ ¿ªÇÒÀº?" << "\n";
+	std::cout << "4. int* pointerì—ì„œ intì˜ ì—­í• ì€?" << "\n";
 
-	union Union { // i f dÀÇ ¸Ş¸ğ¸® ÁÖ¼Ò´Â °ªÀ½
+	union Union { // i f dì˜ ë©”ëª¨ë¦¬ ì£¼ì†ŒëŠ” ê°’ìŒ
 		int i;
 		float f;
 		double d;
@@ -472,82 +472,82 @@ void pointerBasicSummary() {
 		int i;
 	};
 
-	Union u; // union = ¿©·¯ ¼Ó¼º Áß ÇÏ³ª¸¸ ¼±ÅÃ, ±×·³ ³ª¸ÓÁö ¼Ó¼ºÀÇ °ªÀº ¾î¶»°Ô º¯ÇÏ³ª?
-	std::cout << "union : ¸Ş¸ğ¸® ÁÖ¼Ò °°À½" << "\n";
+	Union u; // union = ì—¬ëŸ¬ ì†ì„± ì¤‘ í•˜ë‚˜ë§Œ ì„ íƒ, ê·¸ëŸ¼ ë‚˜ë¨¸ì§€ ì†ì„±ì˜ ê°’ì€ ì–´ë–»ê²Œ ë³€í•˜ë‚˜?
+	std::cout << "union : ë©”ëª¨ë¦¬ ì£¼ì†Œ ê°™ìŒ" << "\n";
 	std::cout << &u << " " << &u.i << " " << &u.f << " " << &u.d << "\n";
 	Struct s;
-	std::cout << "struct : ¸Ş¸ğ¸® ÁÖ¼Ò ´Ù¸§" << "\n";
+	std::cout << "struct : ë©”ëª¨ë¦¬ ì£¼ì†Œ ë‹¤ë¦„" << "\n";
 	std::cout << &s << " " << &s.i << " " << &s.f << " " << &s.d << "\n";
 
-	int* ip = (int*)&u; // uÀÇ ÁÖ¼Ò¸¦ ¹Ì¸® int Æ÷ÀÎÅÍ ÁÖ¼Ò°ªÀ¸·Î °­Á¦ º¯È¯
-	float* fp = (float*)&u; // ¹Ì¸® float Æ÷ÀÎÅÍ ÁÖ¼Ò°ªÀ¸·Î °­Á¦ º¯È¯
-	double* dp = (double*)&u;  // ¹Ì¸® double Æ÷ÀÎÅÍ ÁÖ¼Ò°ªÀ¸·Î °­Á¦ º¯È¯
+	int* ip = (int*)&u; // uì˜ ì£¼ì†Œë¥¼ ë¯¸ë¦¬ int í¬ì¸í„° ì£¼ì†Œê°’ìœ¼ë¡œ ê°•ì œ ë³€í™˜
+	float* fp = (float*)&u; // ë¯¸ë¦¬ float í¬ì¸í„° ì£¼ì†Œê°’ìœ¼ë¡œ ê°•ì œ ë³€í™˜
+	double* dp = (double*)&u;  // ë¯¸ë¦¬ double í¬ì¸í„° ì£¼ì†Œê°’ìœ¼ë¡œ ê°•ì œ ë³€í™˜
 
-	u.i = 1; // Union u¸¦ int·Î Á¤ÇÔ
+	u.i = 1; // Union uë¥¼ intë¡œ ì •í•¨
 	std::cout << *ip << "\n";
 	std::cout << *fp << "\n";
 	std::cout << *dp << "\n";
 
-	std::cout << "Æ÷ÀÎÅÍÀÇ °ªÀ» °­Á¦ º¯È¯ => false" << "\n";
+	std::cout << "í¬ì¸í„°ì˜ ê°’ì„ ê°•ì œ ë³€í™˜ => false" << "\n";
 	std::cout << *ip << "\n";
 	std::cout << (int)*fp << "\n";
 	std::cout << (int)*dp << "\n";
 
-	std::cout << "Æ÷ÀÎÅÍ ¿Í constant" << "\n";
+	std::cout << "í¬ì¸í„° ì™€ constant" << "\n";
 	int n1 = 10;
 	int n2 = 20;
 	const int* p1 = &n1; // const int* p1 => const *p1 => const int n1
-	p1 = &n2; // °¡´É!
-	// *p1 = n2 ºÒ°¡´É!
+	p1 = &n2; // ê°€ëŠ¥!
+	// *p1 = n2 ë¶ˆê°€ëŠ¥!
 
 	int* const p2 = &n1;
-	// p2 = &n2; ºÒ°¡´É!
-	*p2 = n1; // °¡´É!
+	// p2 = &n2; ë¶ˆê°€ëŠ¥!
+	*p2 = n1; // ê°€ëŠ¥!
 
 	const int* const p3 = &n1;
-	// p3 = &n2; ºÒ°¡´É!
-	// *p3 = n2; ºÒ°¡´É!
+	// p3 = &n2; ë¶ˆê°€ëŠ¥!
+	// *p3 = n2; ë¶ˆê°€ëŠ¥!
 
 	int n3 = 30;
 	int n4 = 40;
-	const int* p4 = &n3; // int* p4 = const int &n3; ÀÌ°Å¶û ºñ½ÁÇÑ ´À³¦
+	const int* p4 = &n3; // int* p4 = const int &n3; ì´ê±°ë‘ ë¹„ìŠ·í•œ ëŠë‚Œ
 	p4 = &n4;
 	std::cout << '\n';
-	std::cout << p4 << &n4 << &n3 << "\n"; // °° °° ´Ù¸§
-	std::cout << *p4 << n4 << n3 << "\n"; // °° °° ´Ù¸§
+	std::cout << p4 << &n4 << &n3 << "\n"; // ê°™ ê°™ ë‹¤ë¦„
+	std::cout << *p4 << n4 << n3 << "\n"; // ê°™ ê°™ ë‹¤ë¦„
 }
 void pointerArraySummary() {
-	std::cout << "1. decay, ¹è¿­ÀÌ Æ÷ÀÎÅÍ·Î º¯ÇÔ (¹è¿­ÀÇ Æ¯¼ºÀÌ »ç¶óÁü)" << "\n";
+	std::cout << "1. decay, ë°°ì—´ì´ í¬ì¸í„°ë¡œ ë³€í•¨ (ë°°ì—´ì˜ íŠ¹ì„±ì´ ì‚¬ë¼ì§)" << "\n";
 	int nums[]{ 1,2,3 };
 	int* pNums1 = nums;
-	int* pNums2 = &nums[0]; //int* pNums2 = nums[0]; ÀÌ°Ç ¾ÈµÊ
-	// int pointer¿¡ ¹è¿­ÀÇ ÁÖ¼Ò¸¦ ³Ö¾î¼­ »çÀÌÁî°¡ ´Ş¶óÁü 64bit¶ó¼­ => 8btye, nums=> 12btye
+	int* pNums2 = &nums[0]; //int* pNums2 = nums[0]; ì´ê±´ ì•ˆë¨
+	// int pointerì— ë°°ì—´ì˜ ì£¼ì†Œë¥¼ ë„£ì–´ì„œ ì‚¬ì´ì¦ˆê°€ ë‹¬ë¼ì§ 64bitë¼ì„œ => 8btye, nums=> 12btye
 	std::cout << sizeof(pNums1) << " " << sizeof(nums) << "\n";
 
-	// nums, &nums[0]´Â µ¿ÀÏÇÔ, cÀÇ ±ÔÄ¢
+	// nums, &nums[0]ëŠ” ë™ì¼í•¨, cì˜ ê·œì¹™
 	std::cout << &nums << "\n";
 	std::cout << pNums1 << "\n";
 	std::cout << pNums2 << "\n";
 
 	std::cout << "2. int array pointer, int pointer" << "\n";
 	std::cout << typeid(1).name() << "\n";
-	std::cout << typeid(nums).name() << "\n"; // nums´Â array integerÀÓ
-	std::cout << "(* __ptr64)[3], * __ptr64´Â °°À½ typeid·Î ³Ñ¾î°¡¸é¼­ ¹è¿­ÀÌ ºÙ¾î¼­ ³ª¿À´Â °Å »Ó" << "\n";
-	std::cout << typeid(&nums).name() << "\n"; // &nums == &nums[0]¶û °°À½ c ±ÔÄ¢
+	std::cout << typeid(nums).name() << "\n"; // numsëŠ” array integerì„
+	std::cout << "(* __ptr64)[3], * __ptr64ëŠ” ê°™ìŒ typeidë¡œ ë„˜ì–´ê°€ë©´ì„œ ë°°ì—´ì´ ë¶™ì–´ì„œ ë‚˜ì˜¤ëŠ” ê±° ë¿" << "\n";
+	std::cout << typeid(&nums).name() << "\n"; // &nums == &nums[0]ë‘ ê°™ìŒ c ê·œì¹™
 	std::cout << typeid(&nums[0]).name() << "\n";
 
-	std::cout << "3. Æ÷ÀÎÅÍ¿¡ ´ë°ıÈ£ ¿¬»êÀÚ »ç¿ë °¡´É" << "\n";  // Æ÷ÀÎÅÍ´Â ¹è¿­°ú °°´Ù°í ¸»ÇÏ´Â »ç¶÷µµ ÀÖ´Ù
+	std::cout << "3. í¬ì¸í„°ì— ëŒ€ê´„í˜¸ ì—°ì‚°ì ì‚¬ìš© ê°€ëŠ¥" << "\n";  // í¬ì¸í„°ëŠ” ë°°ì—´ê³¼ ê°™ë‹¤ê³  ë§í•˜ëŠ” ì‚¬ëŒë„ ìˆë‹¤
 	std::cout << pNums1[0] << pNums1[1] << pNums1[2] << "\n";
 
-	std::cout << "4. Æ÷ÀÎÅÍ¿¡ ¼ıÀÚ¸¦ ´õÇÒ ¼ö ÀÖÀ½" << "\n";
+	std::cout << "4. í¬ì¸í„°ì— ìˆ«ìë¥¼ ë”í•  ìˆ˜ ìˆìŒ" << "\n";
 	/// <summary>
-	/// integer potinerÀÌ±â ‹š¹®¿¡ +1À»ÇÏ¸é 4btype°¡ Áõ°¡µÊ Áï
-	/// asdasd0°¡ nums[0]ÀÏ¶§, nums[0]ÀÇ ÁÖ¼Ò°ªÀº´Â 4btye´õÇØ¼­ asdasd4°¡µÊ asdasd4´Â nums[1]°ú °°À½ 
+	/// integer potinerì´ê¸° ë–„ë¬¸ì— +1ì„í•˜ë©´ 4btypeê°€ ì¦ê°€ë¨ ì¦‰
+	/// asdasd0ê°€ nums[0]ì¼ë•Œ, nums[0]ì˜ ì£¼ì†Œê°’ì€ëŠ” 4btyeë”í•´ì„œ asdasd4ê°€ë¨ asdasd4ëŠ” nums[1]ê³¼ ê°™ìŒ 
 	/// </summary>
 
 	int nums1[]{ 1,2,3 };
 	int* pNums3 = nums1;
-	std::cout << pNums3 + 1 << "\n"; // 4btye¾¿ ÁÖ¼Ò°¡ Áõ°¡
+	std::cout << pNums3 + 1 << "\n"; // 4btyeì”© ì£¼ì†Œê°€ ì¦ê°€
 	std::cout << pNums3 + 2 << "\n";
 	std::cout << pNums3 + 3 << "\n";
 
@@ -555,14 +555,14 @@ void pointerArraySummary() {
 	std::cout << *(pNums3 + 1) << "\n";
 	std::cout << *(pNums3 + 2) << "\n";
 
-	std::cout << "5. Æ÷ÀÎÅÍ´Â ÀÌ·± Áşµµ °¡´ÉÇÔ (Æ÷ÀÎÅÍ ++ÇÏ±â)" << "\n";
+	std::cout << "5. í¬ì¸í„°ëŠ” ì´ëŸ° ì§“ë„ ê°€ëŠ¥í•¨ (í¬ì¸í„° ++í•˜ê¸°)" << "\n";
 	int nums2[]{ 1,2,3 };
 	int* pNums4 = nums2;
 	std::cout << *pNums4 << "\n"; // *pNums4 => *pNums4[0]
 	// 
 	pNums4++;
 	std::cout << *pNums4 << "\n";
-	// nums2++ ÀÌ°Ç ¾ÈµÊ nonmodifiableÀÓ
+	// nums2++ ì´ê±´ ì•ˆë¨ nonmodifiableì„
 	return;
 }
 void pointerStringSummary() {
@@ -573,8 +573,8 @@ void pointerStringSummary() {
 	std::cout << typeid(str2).name() << std::endl;
 
 	std::cout << "1. const char*" << "\n";
-	// str1[0] =  'c'; // ÀÌ·±ÁşÀÌ ºÒ°¡´ÉÇÏ°Ô char potiner´Â const char*·Î ¼±¾ğÇØÁà¾ßÇÔ, char´Â »ó¼ö¶ó¼­?
-	// ±Ùµ¥ int*µµ ¾Æ·¡Ã³·³ º¯°æ °¡´ÉÇÑµ¥?
+	// str1[0] =  'c'; // ì´ëŸ°ì§“ì´ ë¶ˆê°€ëŠ¥í•˜ê²Œ char potinerëŠ” const char*ë¡œ ì„ ì–¸í•´ì¤˜ì•¼í•¨, charëŠ” ìƒìˆ˜ë¼ì„œ?
+	// ê·¼ë° int*ë„ ì•„ë˜ì²˜ëŸ¼ ë³€ê²½ ê°€ëŠ¥í•œë°?
 	std::cout << std::strlen(str2) << "\n";
 	std::cout << str1 << "\n";
 	str1[0] = 'c';
@@ -588,39 +588,39 @@ void pointerStringSummary() {
 
 	//srtcpy, stycmp
 
-	std::cout << "2. char pointer¿¡ charÇÔ¼ö Àû¿ëµÊ" << "\n";
+	std::cout << "2. char pointerì— charí•¨ìˆ˜ ì ìš©ë¨" << "\n";
 	char str3[100] = "foo";
 	const char* pstr1 = &str3[0]; // ==  const char* pstr2 = str3;
 	const char* pstr2 = "barbo";
 	strcpy(str3, pstr2);
-	// strcpy(pstr2, str3)´Â ºÒ°¡´É
+	// strcpy(pstr2, str3)ëŠ” ë¶ˆê°€ëŠ¥
 	std::cout << str3 << "\n";
 	std::cout << strcmp(str3, pstr2) << "\n";
 }
 void dynamicAssignSummary() {
-	// µ¿ÀûÇÒ´ç Heap¿¡ À§Ä¡ÇÔ int a = new int[4];
-	// ÀÚµ¿ÇÒ´ç stack¿¡ ½×ÀÓ int a = 0;
+	// ë™ì í• ë‹¹ Heapì— ìœ„ì¹˜í•¨ int a = new int[4];
+	// ìë™í• ë‹¹ stackì— ìŒ“ì„ int a = 0;
 
-	int* pNum = new int;// unnamed, µ¿Àû ÇÒ´ç
-	delete pNum;// ¾ÈÁö¿ì¸é ¸Ş¸ğ¸® °è¼Ó ´Ã¾î³²..
+	int* pNum = new int;// unnamed, ë™ì  í• ë‹¹
+	delete pNum;// ì•ˆì§€ìš°ë©´ ë©”ëª¨ë¦¬ ê³„ì† ëŠ˜ì–´ë‚¨..
 
-	std::cout << "1. ¸Ş¸ğ¸® ´©¼ö" << "\n";
+	std::cout << "1. ë©”ëª¨ë¦¬ ëˆ„ìˆ˜" << "\n";
 	//while (true) { int* num = new int; }
 
-	std::cout << "2. Áö¿î°É ¶Ç Áö¿ì°Å³ª, ÂüÁ¶ÇÏ°í ÀÖ´Â º¯¼ö°¡ Áö¿öÁö¸é ¿¡·¯°¡ ³²" << "\n"; // ¾öÃ» ÁÖÀÇÇØ¾ßÇÔ!
+	std::cout << "2. ì§€ìš´ê±¸ ë˜ ì§€ìš°ê±°ë‚˜, ì°¸ì¡°í•˜ê³  ìˆëŠ” ë³€ìˆ˜ê°€ ì§€ì›Œì§€ë©´ ì—ëŸ¬ê°€ ë‚¨" << "\n"; // ì—„ì²­ ì£¼ì˜í•´ì•¼í•¨!
 	int* pnum1 = new int(123);
 	int* pnum2 = pnum1;
 	delete pnum1;
 	// delete pnum1;
-	std::cout << *pnum2 << "\n"; // Æ÷ÀÎÅÍ¸¦ Áö¿üÀ¸´Ï±î ÂüÁ¶ º¯¼ö°¡ ¾²·¹±â°ªÀÌ ³ª¿È 
+	std::cout << *pnum2 << "\n"; // í¬ì¸í„°ë¥¼ ì§€ì› ìœ¼ë‹ˆê¹Œ ì°¸ì¡° ë³€ìˆ˜ê°€ ì“°ë ˆê¸°ê°’ì´ ë‚˜ì˜´ 
 	int* pnum3;
 	{
 		int n = 10;
 		pnum3 = &n;
 	}
-	std::cout << *pnum3 << "\n"; // nÀÌ ÇØÁ¦µÇ¾ú±â¶§¹®¿¡ ´Ù¸¥ os¿¡¼­ µÈ´Ù´Â º¸ÀåÀÌ ¾øÀ½
+	std::cout << *pnum3 << "\n"; // nì´ í•´ì œë˜ì—ˆê¸°ë•Œë¬¸ì— ë‹¤ë¥¸ osì—ì„œ ëœë‹¤ëŠ” ë³´ì¥ì´ ì—†ìŒ
 
-	std::cout << "3. µ¿Àû ¹è¿­ÇÒ´ç (cin Á¤¼ö ´­·¯ÁÖ±â)" << "\n";
+	std::cout << "3. ë™ì  ë°°ì—´í• ë‹¹ (cin ì •ìˆ˜ ëˆŒëŸ¬ì£¼ê¸°)" << "\n";
 
 	int s;
 	std::cin >> s;
@@ -630,15 +630,15 @@ void dynamicAssignSummary() {
 		std::cout << arr[1] << "\n";
 	}
 	std::cout << "4. delete[]" << "\n";
-	delete[] arr; // delete[]·Î ÇØÁ¦
+	delete[] arr; // delete[]ë¡œ í•´ì œ
 
 
-	std::cout << "4. ±¸Á¶Ã¼ µ¿ÀûÇÒ´ç" << "\n";
+	std::cout << "4. êµ¬ì¡°ì²´ ë™ì í• ë‹¹" << "\n";
 	struct Person {
 		float weight;
 		float height;
 	};
-	// Æ÷ÀÎÅÍ°¡ °¡¸£Å°´Â °ªÀÇ ¸Ş¼­µå È£Ãâ "->"
+	// í¬ì¸í„°ê°€ ê°€ë¥´í‚¤ëŠ” ê°’ì˜ ë©”ì„œë“œ í˜¸ì¶œ "->"
 	Person* person = new Person{ 75.5f, 177.4f };
 	std::cout << person->height << (*person).weight << "\n";
 
@@ -653,39 +653,39 @@ void dynamicAssignSummary() {
 }
 void nullptrSummary() {
 	using namespace std;
-	cout << "1. Æ÷ÀÎÅÍ¸¦ deleteÇÏ¸é nullptr¸¦ ÇÒ´çÇØÁÖ´Â ½À°üÀ» °¡ÁöÀÚ" << "\n";
+	cout << "1. í¬ì¸í„°ë¥¼ deleteí•˜ë©´ nullptrë¥¼ í• ë‹¹í•´ì£¼ëŠ” ìŠµê´€ì„ ê°€ì§€ì" << "\n";
 	int* p = new int;
 	delete p;
 	p = nullptr;
-	// ...¾öÃ» ±ä ·ÎÁ÷...
+	// ...ì—„ì²­ ê¸´ ë¡œì§...
 	cout << p << "\n";
 	cout << nullptr << "\n";
 	if (p != nullptr) cout << p << "\n";
 	else cout << "p is nullptr" << "\n";
-	cout << "2. func(nullptr)Àº ¾ÈµÊ func(NULL)Àº 0ÀÌ °¨.. c11 ÀÌ»ó½Ã nullptr»ç¿ëÇÏ±â" << "\n";
+	cout << "2. func(nullptr)ì€ ì•ˆë¨ func(NULL)ì€ 0ì´ ê°.. c11 ì´ìƒì‹œ nullptrì‚¬ìš©í•˜ê¸°" << "\n";
 }
 void
 pointerVoldSummary() {
 	using namespace std;
-	cout << "1. void´Â ÇüÀÌ ¾ø´Ù´Â °É ³ªÅ¸³»´Â Çü" << "\n";
-	// vold i; ºÒ°¡´É
+	cout << "1. voidëŠ” í˜•ì´ ì—†ë‹¤ëŠ” ê±¸ ë‚˜íƒ€ë‚´ëŠ” í˜•" << "\n";
+	// vold i; ë¶ˆê°€ëŠ¥
 	int num = 10;
 	int* p = &num;
 	cout << p << "\n";
 
-	cout << "2. void*¿¡ ´Ù¸¥ Å¸ÀÔÆ÷ÀÎÅÍ¸¦ ÇÒ´ç°¡´É" << "\n";
+	cout << "2. void*ì— ë‹¤ë¥¸ íƒ€ì…í¬ì¸í„°ë¥¼ í• ë‹¹ê°€ëŠ¥" << "\n";
 	void* vp = p;
-	// cout << *vp << "\n"; // vp´Â ÀĞ´Â °Å Â÷Á¦°¡ ¾ÈµÊ
+	// cout << *vp << "\n"; // vpëŠ” ì½ëŠ” ê±° ì°¨ì œê°€ ì•ˆë¨
 	float* p0 = (float*)vp;
-	int* p1 = (int*)vp; // integer pointer·Î void pointer¸¦ º¯È¯
-	cout << *p0 << "\n"; // int*´Â int*·Î º¯È¯ÇØ¾ßÇÔ
+	int* p1 = (int*)vp; // integer pointerë¡œ void pointerë¥¼ ë³€í™˜
+	cout << *p0 << "\n"; // int*ëŠ” int*ë¡œ ë³€í™˜í•´ì•¼í•¨
 	cout << *p1 << "\n";
 
-	cout << "3. void*¸¦ ¾îµû ¾¸ => ¾î¶² typeÀÇ Æ÷ÀÎÅÍÀÎÁö ¾Ë ¼ö ¾øÀ» ‹š" << "\n";
-	void* vp0 = malloc(sizeof(int) * 3); // 12btye¸¦  heap¾îµò°¡¿¡ ÇÒ´çÇÏ°í(µ¿Àû ÇÒ´ç) º¸ÀÌµå Æ÷ÀÎÅÍ·Î ¹İÈ¯ÇÔ(¸Ş¸ğ¸® ÁÖ¼Ò¸¦°¡¸£Å°´Â Æ÷ÀÎÅÍ)
+	cout << "3. void*ë¥¼ ì–´ë”° ì”€ => ì–´ë–¤ typeì˜ í¬ì¸í„°ì¸ì§€ ì•Œ ìˆ˜ ì—†ì„ ë–„" << "\n";
+	void* vp0 = malloc(sizeof(int) * 3); // 12btyeë¥¼  heapì–´ë”˜ê°€ì— í• ë‹¹í•˜ê³ (ë™ì  í• ë‹¹) ë³´ì´ë“œ í¬ì¸í„°ë¡œ ë°˜í™˜í•¨(ë©”ëª¨ë¦¬ ì£¼ì†Œë¥¼ê°€ë¥´í‚¤ëŠ” í¬ì¸í„°)
 	int* intp = (int*)vp0;
 
-	free(vp0); // delete¶û °°À½  Áö¿ö¾ßÇÏ´Â Æ÷ÀÎÅÍÀÇ Å¸ÀÔÀÎÁö ¸ğ¸¦ ‹š »ç¿ë°¡´É
+	free(vp0); // deleteë‘ ê°™ìŒ  ì§€ì›Œì•¼í•˜ëŠ” í¬ì¸í„°ì˜ íƒ€ì…ì¸ì§€ ëª¨ë¥¼ ë–„ ì‚¬ìš©ê°€ëŠ¥
 	free(intp);
 }
 void pointerVectorSummary() {
@@ -693,13 +693,13 @@ void pointerVectorSummary() {
 	int s;
 	// cin >> s;
 	// array<int,s>* arr = new array<int.s> ..?
-	// array<int, s>°¡ ¾ÈµÊ..
-	cout << "1. ¼ıÀÚ Å« °Å ¾Æ¹«°Å³ª ÀÔ·Â : ";
+	// array<int, s>ê°€ ì•ˆë¨..
+	cout << "1. ìˆ«ì í° ê±° ì•„ë¬´ê±°ë‚˜ ì…ë ¥ : ";
 	cin >> s;
-	std::vector<int> vec0(s); // µ¿Àû »çÀÌÁî Á¶Á¤ °¡´É
+	std::vector<int> vec0(s); // ë™ì  ì‚¬ì´ì¦ˆ ì¡°ì • ê°€ëŠ¥
 	std::vector<int> vec1(5, 2);
 
-	cout << "2. µ¿Àû »çÀÌÁî Á¶Á¤" << "\n";
+	cout << "2. ë™ì  ì‚¬ì´ì¦ˆ ì¡°ì •" << "\n";
 	vec0.resize(3);
 	for (auto i : vec1) cout << i << " ";
 	cout << endl;
@@ -707,7 +707,7 @@ void pointerVectorSummary() {
 	for (auto i : vec1) cout << i << " ";
 	cout << endl;
 
-	cout << "3. µ¿Àû ¹è¿­ÀÌ¶ó »çÀÌÁî¸¦ ´Ã¸®¸é ÀçÇÒ´çÀÌ ÀÏ¾î³¯ ¼ö ÀÖÀ½" << "\n";
+	cout << "3. ë™ì  ë°°ì—´ì´ë¼ ì‚¬ì´ì¦ˆë¥¼ ëŠ˜ë¦¬ë©´ ì¬í• ë‹¹ì´ ì¼ì–´ë‚  ìˆ˜ ìˆìŒ" << "\n";
 	vector<int> vec3;
 
 	for (int i = 0; i < 10; i++) {
@@ -715,7 +715,7 @@ void pointerVectorSummary() {
 		cout << vec3.size() << " " << vec3.data() << "\n";
 	}
 
-	cout << "4. capacity¸¦ ¹Ì¸® Á¤ÇØµÎ¸é µ¿Àû ÇÒ´çÀÌ ¾ÈÀÏ¾î³²" << "\n";
+	cout << "4. capacityë¥¼ ë¯¸ë¦¬ ì •í•´ë‘ë©´ ë™ì  í• ë‹¹ì´ ì•ˆì¼ì–´ë‚¨" << "\n";
 	vector<int> vec4;
 	vec4.reserve(1000);
 	for (int i = 0; i < 10; i++) {
@@ -723,7 +723,7 @@ void pointerVectorSummary() {
 		cout << vec4.size() << " " << vec4.data() << "\n";
 	}
 
-	cout << "5. ±æÀÌ ´Ş¶óµµ ºñ±³, ÇÒ´ç °¡´É" << "\n";
+	cout << "5. ê¸¸ì´ ë‹¬ë¼ë„ ë¹„êµ, í• ë‹¹ ê°€ëŠ¥" << "\n";
 	vector<int> vec5 = { 1,2 };
 	vector<int> vec6 = { 5,4,3,2,1 };
 	vec6 = vec5;
@@ -731,36 +731,36 @@ void pointerVectorSummary() {
 }
 void referenceSummary() {
 
-	std::cout << "1. ÂüÁ¶ ÇÏ±â" << "\n";
+	std::cout << "1. ì°¸ì¡° í•˜ê¸°" << "\n";
 	int num0 = 10;
-	const int& num1 = num0; // num0 °ªÀÇ ÁÖ¼Ò¸¦ °¡Áø º¯¼ö, const -> (ÇÒ´çx, º¯°æx), const •û¸é (ÇÒ´ço, º¯°æo)
+	const int& num1 = num0; // num0 ê°’ì˜ ì£¼ì†Œë¥¼ ê°€ì§„ ë³€ìˆ˜, const -> (í• ë‹¹x, ë³€ê²½x), const ëº´ë©´ (í• ë‹¹o, ë³€ê²½o)
 	int* num2 = &num0;
-	// 	int* num2 = &num1; const¶ó¼­ ºÒ°¡´É! 
+	// 	int* num2 = &num1; constë¼ì„œ ë¶ˆê°€ëŠ¥! 
 
 
-	// ÂüÁ¶ º¯¼ö´Â ¼±¾ğ ÈÄ ÂüÁ¶ÁÖ¼Ò¸¦ º¯°æÇÒ ¼ö ¾øÀ½!
-	// int& num3; ºÒ°¡´É
-	// cont int* nul3 = 1Àº °¡´É
-	// Æ÷ÀÎÅÍ´Â ¾Æ·¡Ã³·³ ¹Ù²Ù´Â °Å °¡´É!
+	// ì°¸ì¡° ë³€ìˆ˜ëŠ” ì„ ì–¸ í›„ ì°¸ì¡°ì£¼ì†Œë¥¼ ë³€ê²½í•  ìˆ˜ ì—†ìŒ!
+	// int& num3; ë¶ˆê°€ëŠ¥
+	// cont int* nul3 = 1ì€ ê°€ëŠ¥
+	// í¬ì¸í„°ëŠ” ì•„ë˜ì²˜ëŸ¼ ë°”ê¾¸ëŠ” ê±° ê°€ëŠ¥!
 	int* ptr1 = nullptr;
 	ptr1 = &num0;
 
-	std::cout << "2. ÂüÁ¶°ªÀº ÀüºÎ º¯°æµÊ " << "\n";
+	std::cout << "2. ì°¸ì¡°ê°’ì€ ì „ë¶€ ë³€ê²½ë¨ " << "\n";
 	int num3 = 9;
-	// num1 = num3; const¶ó¼­ ºÒ°¡´É!
+	// num1 = num3; constë¼ì„œ ë¶ˆê°€ëŠ¥!
 	*num2 = num3;
-	std::cout << num1 << *num2 << num3 << "\n"; // ÂüÁ¶ º¯¼ö´Â dereferencingÇÊ¿ä¾øÀ½ °£´ÜÇÔ!
+	std::cout << num1 << *num2 << num3 << "\n"; // ì°¸ì¡° ë³€ìˆ˜ëŠ” dereferencingí•„ìš”ì—†ìŒ ê°„ë‹¨í•¨!
 
 	std::vector<int> v;
 	std::vector<int>& vr = v;
 	std::vector<int>* vp = &vr;
 
-	std::cout << "3. vector ÂüÁ¶ÇÏ±â" << "\n";
+	std::cout << "3. vector ì°¸ì¡°í•˜ê¸°" << "\n";
 	v.push_back(1); vr.push_back(2); vp->push_back(3);
 	for (auto i : v) std::cout << i << " ";
 	std::cout << "\n";
 
-	std::cout << "4. ÂüÁ¶¾µ¶§ Á¶½ÉÇÒ °Å" << "\n";
+	std::cout << "4. ì°¸ì¡°ì“¸ë•Œ ì¡°ì‹¬í•  ê±°" << "\n";
 	int* n0 = new int(12);
 	int& n1 = *n0;
 
@@ -770,11 +770,11 @@ void referenceSummary() {
 	n0 = nullptr;
 	std::cout << n1 << "\n"; // undefined behavior
 
-	std::cout << "5. ÂüÁ¶¶û Æ÷ÀÎÅÍ¶û °á°ú°¡ °°°Ô ¾²±â" << "\n";
+	std::cout << "5. ì°¸ì¡°ë‘ í¬ì¸í„°ë‘ ê²°ê³¼ê°€ ê°™ê²Œ ì“°ê¸°" << "\n";
 
 	// www.compiler explorer
-	// ¾Æ·¡ ÄÚµå¸¦ ºñ±³ÇØº¸¸é ±â°è¾î ÄÚµå°¡ °°À½ (³»ºÎÀûÀ¸·Î reference´Â pointer¶û °°À½)
-	// reference´Â Æ÷ÀÎÅÍ¸¦ »ç¿ëÇÏ±â ½±°Ô º¯ÇüÇÑ °Í (¿À¹ö·Îµù, ÆĞ½º¹ÙÀÌ)
+	// ì•„ë˜ ì½”ë“œë¥¼ ë¹„êµí•´ë³´ë©´ ê¸°ê³„ì–´ ì½”ë“œê°€ ê°™ìŒ (ë‚´ë¶€ì ìœ¼ë¡œ referenceëŠ” pointerë‘ ê°™ìŒ)
+	// referenceëŠ” í¬ì¸í„°ë¥¼ ì‚¬ìš©í•˜ê¸° ì‰½ê²Œ ë³€í˜•í•œ ê²ƒ (ì˜¤ë²„ë¡œë”©, íŒ¨ìŠ¤ë°”ì´)
 	/// <summary>
 	/// int a = 3;
 	/// int& b = a;
@@ -788,7 +788,7 @@ void referenceSummary() {
 	int a1 = 10;
 	int& a2 = a1;
 	int* const a3 = &a1;
-	// a2, a3Àº °ÅÀÇ µ¿ÀÏÇÔ
+	// a2, a3ì€ ê±°ì˜ ë™ì¼í•¨
 
 }
 void functionBasicSummary(int argc, char* argv[]) {
@@ -796,14 +796,14 @@ void functionBasicSummary(int argc, char* argv[]) {
 	for (int i = 0; i < argc; i++) {
 		std::cout << argv[i] << "\n"; // C:\Users\interbird\source\repos\peacepiece7\cpp-playground\x64\Debug\syntax_basic.exe
 	}
-	// cd C:\Users\interbird\source\repos\peacepiece7\cpp-playground\x64\Debug¿¡ .exeÆÄÀÏÀÌ ÀÖÀ½
+	// cd C:\Users\interbird\source\repos\peacepiece7\cpp-playground\x64\Debugì— .exeíŒŒì¼ì´ ìˆìŒ
 
 
 	// summary
 	// cd C:\Users\interbird\source\repos\peacepiece7\cpp-playground\x64\Debug
-	// syntax_basic.exe Hello world! ½ÇÇàÇØº¸±â
-	// argc => ¹è¿­ÀÇ °³¼ö
-	// argv => °ø¹éÀ¸·Î ÆÄ¶ó¸ŞÅÍ¸¦ ±¸ºĞÇØ¼­ ¹ŞÀº ¹è¿­
+	// syntax_basic.exe Hello world! ì‹¤í–‰í•´ë³´ê¸°
+	// argc => ë°°ì—´ì˜ ê°œìˆ˜
+	// argv => ê³µë°±ìœ¼ë¡œ íŒŒë¼ë©”í„°ë¥¼ êµ¬ë¶„í•´ì„œ ë°›ì€ ë°°ì—´
 	// summary
 }
 
@@ -842,14 +842,14 @@ void recursionSummary() {
 }
 
 void swap(int px, int py) {
-	// ÀÌ·¸°ÔÂ¥¸é px, py´Â x,yÀÇ º¹»ç´Ï±î x,yº¯°æ¾ÈµÊ &·Î ÁÖ¼Ò¸¦ Áà¾ßÇÔ
+	// ì´ë ‡ê²Œì§œë©´ px, pyëŠ” x,yì˜ ë³µì‚¬ë‹ˆê¹Œ x,yë³€ê²½ì•ˆë¨ &ë¡œ ì£¼ì†Œë¥¼ ì¤˜ì•¼í•¨
 	std::cout << "px :" << &px << ", py :" << &py << "\n";
 	int temp = px;
 	px = py;
 	py = temp;
 }
 void swap2(int* px, int* py) {
-	// ÀÌ·¸°ÔÂ¥¸é px, py´Â x,yÀÇ º¹»ç´Ï±î x,yº¯°æ¾ÈµÊ &·Î ÁÖ¼Ò¸¦ Áà¾ßÇÔ
+	// ì´ë ‡ê²Œì§œë©´ px, pyëŠ” x,yì˜ ë³µì‚¬ë‹ˆê¹Œ x,yë³€ê²½ì•ˆë¨ &ë¡œ ì£¼ì†Œë¥¼ ì¤˜ì•¼í•¨
 	std::cout << "px :" << px << ", py :" << py << "\n";
 	int temp = *px;
 	px = py;
@@ -865,30 +865,30 @@ void upgrade(Weapon weapon) {
 }
 void passByValueSummary() {
 	int x = 10, y = 20;
-	// °ªÀ¸·Î Àü´Ş
+	// ê°’ìœ¼ë¡œ ì „ë‹¬
 	swap(x, y);
 	std::cout << "x :" << &x << ", y :" << &y << "\n";
-	// ÁÖ¼Ò·Î Àü´Ş
+	// ì£¼ì†Œë¡œ ì „ë‹¬
 	swap2(&x, &y);
 	std::cout << "x :" << &x << ", y :" << &y << "\n";
 }
 
-// => ¿©±â ¾Æ·¡ºÎÅÍ °øºÎ ´õÇÏ°í ´Ù½Ã º¾½Ã´Ù !!
+// => ì—¬ê¸° ì•„ë˜ë¶€í„° ê³µë¶€ ë”í•˜ê³  ë‹¤ì‹œ ë´…ì‹œë‹¤ !!
 void upgread1(Weapon* weapon) {
 	(*weapon).price += 10;
 	weapon->power += 10;
 }
 void print(const Weapon* weapon) {
-	// const Weapon* ÀÌ·¸°Ô ÀÛ¼ºÇÏ¸é Æ÷ÀÎÅÍÀÇ °ªÀ» º¯°æÇÒ ¼ö ¾øÀ½
+	// const Weapon* ì´ë ‡ê²Œ ì‘ì„±í•˜ë©´ í¬ì¸í„°ì˜ ê°’ì„ ë³€ê²½í•  ìˆ˜ ì—†ìŒ
 	std::cout << weapon->power << "\n";
 	std::cout << weapon->price << "\n";
 
-	const Weapon* weapon0 = weapon; // °¡´É
-	// Weapon* weapon1 = weapon; const WeaponÀº const·Î ¹Ş¾Æ¾ßÇÔ (Æ÷ÀÎÅÍ°¡ °¡¸£Å°´Â °ªÀ» º¯°æÀ» ¸øÇÏµµ·Ï)
+	const Weapon* weapon0 = weapon; // ê°€ëŠ¥
+	// Weapon* weapon1 = weapon; const Weaponì€ constë¡œ ë°›ì•„ì•¼í•¨ (í¬ì¸í„°ê°€ ê°€ë¥´í‚¤ëŠ” ê°’ì„ ë³€ê²½ì„ ëª»í•˜ë„ë¡)
 }
 void func(int nums[4]) {
-	std::cout << typeid(nums).name() << "\n"; // pointer·Î ¹Ş±â ¶§¹®¿¡ ¹è¿­ÀÇ »çÀÌÁî Á¤º¸¸¦ ÀÒ¾î¹ö¸²(decayµÊ), ÀÌ·¡¼­ vector array±ÇÀåÇÔ
-	//for (int i : nums) { } range base for ºÒ°¡´É ÀÏ¹İ forÀº °¡´É
+	std::cout << typeid(nums).name() << "\n"; // pointerë¡œ ë°›ê¸° ë•Œë¬¸ì— ë°°ì—´ì˜ ì‚¬ì´ì¦ˆ ì •ë³´ë¥¼ ìƒì–´ë²„ë¦¼(decayë¨), ì´ë˜ì„œ vector arrayê¶Œì¥í•¨
+	//for (int i : nums) { } range base for ë¶ˆê°€ëŠ¥ ì¼ë°˜ forì€ ê°€ëŠ¥
 }
 int* func1() {
 	int nums2[4]{ 1,2,3,4 };
@@ -900,35 +900,35 @@ void func2(int argc, char** argv) {
 	}
 }
 void func3(int argc, char(*argv)[5]) {
-	// char (*argv)[5] => char 5°³Â¥¸®¸¦ °¡¸£Å°´Â Æ÷ÀÎÅÍ
-	// char* argv[5] => ´õºí Æ÷ÀÎÅÍÀÓ
+	// char (*argv)[5] => char 5ê°œì§œë¦¬ë¥¼ ê°€ë¥´í‚¤ëŠ” í¬ì¸í„°
+	// char* argv[5] => ë”ë¸” í¬ì¸í„°ì„
 	for (int i = 0; i < argc; ++i) {
 		std::cout << argv[i] << "\n";
 	}
 }
 void passByAddressSummary(int argc, char** argv) {
-	std::cout << "1. ÂüÁ¶·Î Àü´Ş" << "\n";
+	std::cout << "1. ì°¸ì¡°ë¡œ ì „ë‹¬" << "\n";
 	Weapon weapon(10, 20);
 	upgread1(&weapon);
-	// print(weapon);// -> °ªÀ» º¹»çÇÏ´Âµ¥ ºñ¿ëÀÌ ¹ß»ı
+	// print(weapon);// -> ê°’ì„ ë³µì‚¬í•˜ëŠ”ë° ë¹„ìš©ì´ ë°œìƒ
 
-	std::cout << "2. const Weapon* => °ªÀÌ º¯°æµÇÁö ¾ÊÀ½À» º¸ÀåÇØÁÜ" << "\n";
+	std::cout << "2. const Weapon* => ê°’ì´ ë³€ê²½ë˜ì§€ ì•ŠìŒì„ ë³´ì¥í•´ì¤Œ" << "\n";
 	print(&weapon);
 
-	std::cout << "3. ¹è¿­À» ÀÎÀÚ·Î Àü´ŞÇÒ °æ¿ì ¹è¿­ Æ÷ÀÎÅÍ·Î ¹Ş¾Æ¼­ ¼Ó¼º(»çÀÌÁî)¸¦ ÀÒ¾î¹ö¸²" << "\n";
+	std::cout << "3. ë°°ì—´ì„ ì¸ìë¡œ ì „ë‹¬í•  ê²½ìš° ë°°ì—´ í¬ì¸í„°ë¡œ ë°›ì•„ì„œ ì†ì„±(ì‚¬ì´ì¦ˆ)ë¥¼ ìƒì–´ë²„ë¦¼" << "\n";
 	int nums[4]{ 1,2,3,4 };
 	func(nums);
-	//	func1(); ÀÌ·±½ÄÀ¸·Î Â¥¸é ÇÔ¼ö°¡ »ç¶óÁö¸é¼­ °ªÀ» ÀÒÀ»¼öµµ ÀÖÀ½, Á¶½ÉÇÒ°Í
+	//	func1(); ì´ëŸ°ì‹ìœ¼ë¡œ ì§œë©´ í•¨ìˆ˜ê°€ ì‚¬ë¼ì§€ë©´ì„œ ê°’ì„ ìƒì„ìˆ˜ë„ ìˆìŒ, ì¡°ì‹¬í• ê²ƒ
 
-	// ¿©±â ¾Æ·¡´Â ÀÌÇØ ¸øÇß½¿
-	std::cout << "4. argv[]´Â ´õºí Æ÷ÀÎÅÍÀÓ" << "\n";
+	// ì—¬ê¸° ì•„ë˜ëŠ” ì´í•´ ëª»í–ˆìŠ´
+	std::cout << "4. argv[]ëŠ” ë”ë¸” í¬ì¸í„°ì„" << "\n";
 	func2(argc, argv);
 	char strs[][5] = { "abcd", "efgh" };
 	func3(2, strs);
-	// char** => 8byte¾¿ ´õÇÔ
-	// |8¹ÙÀÌÆ® ÁÖ¼Ò|8¹ÙÀÌÆ® ÁÖ¼Ò|8¹ÙÀÌÆ® ÁÖ¼Ò|8¹ÙÀÌÆ® ÁÖ¼Ò| ...
+	// char** => 8byteì”© ë”í•¨
+	// |8ë°”ì´íŠ¸ ì£¼ì†Œ|8ë°”ì´íŠ¸ ì£¼ì†Œ|8ë°”ì´íŠ¸ ì£¼ì†Œ|8ë°”ì´íŠ¸ ì£¼ì†Œ| ...
 	// -> |"syntax_basic.exe"| ...
-	// char[2][5] => 5byte¾¿ ´õÇØ¾ß ÇÑ´Ù
+	// char[2][5] => 5byteì”© ë”í•´ì•¼ í•œë‹¤
 	//->  |"abcd\0"|"efgh\0"|
 }
 
@@ -938,38 +938,38 @@ void swap4(int& px, int& py) {
 	px = tmp;
 }
 void passByReferenceSummary() {
-	// ±¸Á¶Ã¼Ã³·³ »çÀÌÁî°¡ Å¬¶§, ¿øº»À» º¯°æÇÒ ¼ö ¾ø°Ô °ªÀ» Àü´ŞÇÏ°í ½Íµğ¸é const int&¸¦ »ç¿ë
-	// int°°Àº °æ¿ì °£´ÜÇÏ°Ô ³Ñ°Üµµ µÊ
-	std::cout << "1. Æ÷ÀÎÅÍ¸¦ Ãß»óÈ­(³»ºÎÀû µ¿ÀÛÀ» °¨Ãã) => ÂüÁ¶" << "\n";
+	// êµ¬ì¡°ì²´ì²˜ëŸ¼ ì‚¬ì´ì¦ˆê°€ í´ë•Œ, ì›ë³¸ì„ ë³€ê²½í•  ìˆ˜ ì—†ê²Œ ê°’ì„ ì „ë‹¬í•˜ê³  ì‹¶ë””ë©´ const int&ë¥¼ ì‚¬ìš©
+	// intê°™ì€ ê²½ìš° ê°„ë‹¨í•˜ê²Œ ë„˜ê²¨ë„ ë¨
+	std::cout << "1. í¬ì¸í„°ë¥¼ ì¶”ìƒí™”(ë‚´ë¶€ì  ë™ì‘ì„ ê°ì¶¤) => ì°¸ì¡°" << "\n";
 	int x = 10, y = 20;
 	swap(x, y);
 	std::cout << x << " " << y << '\n';
 
 	int num[] = { 1,2,3,4 };
 	for (const int& num : num) {
-		// °´Ã¼¸¦ ¹Ù²ÙÁö ¾ÊÀ»°Å¸é const int& (ÀÇµµ¸¦ ¸íÈ®ÇÏ°Ô ÇÏ±â)
+		// ê°ì²´ë¥¼ ë°”ê¾¸ì§€ ì•Šì„ê±°ë©´ const int& (ì˜ë„ë¥¼ ëª…í™•í•˜ê²Œ í•˜ê¸°)
 	}
-	// const int&´Â ÀÓ½Ã°´Ã¼¸¦ »ı¼ºÇÏ°í ÀÓ½Ã °´Ã¼¸¦ °¡¸£Å´, ¾îÂ÷ÇÇ ´Ù¸¥ °ªÀ» ¸ø °¡¸£Å°´Ï±î 10 °°Àº º¯¼öµµ const int&¿¡ ÇÒ´ç °¡´É
+	// const int&ëŠ” ì„ì‹œê°ì²´ë¥¼ ìƒì„±í•˜ê³  ì„ì‹œ ê°ì²´ë¥¼ ê°€ë¥´í‚´, ì–´ì°¨í”¼ ë‹¤ë¥¸ ê°’ì„ ëª» ê°€ë¥´í‚¤ë‹ˆê¹Œ 10 ê°™ì€ ë³€ìˆ˜ë„ const int&ì— í• ë‹¹ ê°€ëŠ¥
 	const int& n = 10;
 
 
 
 }
 
-int ppow(int base, int exp = 2) { //int pow(int base = 2, int exp) ÀÌ·¸°Ô´Â ¾ÈµÊ defaultµÚ ÆÄ¶ó¸ŞÅÍ´Â ÀüºÎ default°¡ ÇÊ¿äÇÔ
+int ppow(int base, int exp = 2) { //int pow(int base = 2, int exp) ì´ë ‡ê²ŒëŠ” ì•ˆë¨ defaultë’¤ íŒŒë¼ë©”í„°ëŠ” ì „ë¶€ defaultê°€ í•„ìš”í•¨
 	int ret = 1;
 	for (int i = 0; i < exp; i++) {
 		ret *= base;
 	}
 	return ret;
 }
-// int ppow(int, int = 3); // µğÆúÆ® ¸Å°³º¯¼ö¸¦ ÇÑ ¹ø ´õ ¾²°í ½ÍÀ¸¸é °¢ ÆÄÀÏ¿¡¼­ ¿ŞÂÊ ÄÚµå¸¦ ¼±¾ğÇÏ¸é µÊ 
+// int ppow(int, int = 3); // ë””í´íŠ¸ ë§¤ê°œë³€ìˆ˜ë¥¼ í•œ ë²ˆ ë” ì“°ê³  ì‹¶ìœ¼ë©´ ê° íŒŒì¼ì—ì„œ ì™¼ìª½ ì½”ë“œë¥¼ ì„ ì–¸í•˜ë©´ ë¨ 
 struct Person {
 	float height;
 	float weight;
 };
 Person p{ 66.6f, 166.6f };
-void foo(Person p0 = p) { //  ÀÎ½ºÅÏ½º °´Ã¼¸¦ default°ªÀ¸·Î ÇÒ´ç
+void foo(Person p0 = p) { //  ì¸ìŠ¤í„´ìŠ¤ ê°ì²´ë¥¼ defaultê°’ìœ¼ë¡œ í• ë‹¹
 	std::cout << p0.height << "\n";
 	std::cout << p0.weight << "\n";
 }
@@ -983,14 +983,14 @@ void print(Person* p0 = nullptr) {
 	}
 }
 void defaultParameterSummmary() {
-	std::cout << "1. µğÆúÆ® ¸Å°³º¯¼ö " << "\n";
+	std::cout << "1. ë””í´íŠ¸ ë§¤ê°œë³€ìˆ˜ " << "\n";
 	std::cout << ppow(2) << "\n";
 
-	std::cout << "2. ±¸Á¶Ã¼ µğÆúÆ® ¸Å°³º¯¼ö" << "\n";
+	std::cout << "2. êµ¬ì¡°ì²´ ë””í´íŠ¸ ë§¤ê°œë³€ìˆ˜" << "\n";
 	foo();
 	foo({ 77.7f, 177.7f });
 
-	std::cout << "3, ¸Å°³º¯¼ö ¿¹¿ÜÃ³¸®ÇÏ±â" << "\n";
+	std::cout << "3, ë§¤ê°œë³€ìˆ˜ ì˜ˆì™¸ì²˜ë¦¬í•˜ê¸°" << "\n";
 	print();
 	Person p{ 55.f,155.f };
 	print(&p);
@@ -1012,18 +1012,18 @@ void func11(int, int) { return; } // func11#int-int
 void func11(char) { return; } // func11#char
 void functionOverloadingSummary() {
 	using namespace std;
-	std::cout << "1. ÇÔ¼ö ¿À¹ö·Îµù " << "\n";
-	// ÆÄ¶ó¸ŞÅÍÀÇ Å¸ÀÔ, °³¼ö¿¡ ´ëÇØ¼­¸¸ ¿À¹ö·ÎµùÀÌ °¡´É ¹İÈ¯Å¸ÀÔÀº °°¾Æ¾ß ÇÔ
+	std::cout << "1. í•¨ìˆ˜ ì˜¤ë²„ë¡œë”© " << "\n";
+	// íŒŒë¼ë©”í„°ì˜ íƒ€ì…, ê°œìˆ˜ì— ëŒ€í•´ì„œë§Œ ì˜¤ë²„ë¡œë”©ì´ ê°€ëŠ¥ ë°˜í™˜íƒ€ì…ì€ ê°™ì•„ì•¼ í•¨
 	cout << countDigit(12345) << "\n";
 	cout << countDigit("12345") << "\n";
 
 	std::cout << "2. static binding" << "\n";
-	// ÄÄÆÄÀÏÇÒ¶§ ½ÇÇàÇÑ ÇÔ¼ö¸¦ ÆÄ¶ó¸ÅÅÍ Å¸ÀÔ¿¡ ¸Â°Ô ¹ÙÀÎµù ½ÃÄÑÁÜ
-	// °´Ã¼ÁöÇâÀÇ ´ÙÇü¼º¿¡ ÇØ´çµÈ´Ù°í ÇÔ..
+	// ì»´íŒŒì¼í• ë•Œ ì‹¤í–‰í•œ í•¨ìˆ˜ë¥¼ íŒŒë¼ë§¤í„° íƒ€ì…ì— ë§ê²Œ ë°”ì¸ë”© ì‹œì¼œì¤Œ
+	// ê°ì²´ì§€í–¥ì˜ ë‹¤í˜•ì„±ì— í•´ë‹¹ëœë‹¤ê³  í•¨..
 	func11(10, 10); // func11#int-int
 	func11('a'); // func11#char
 
-	cout << "3. cout ÇÔ¼ö ¿À¹ö·Îµù, coutÇÔ¼ö ÀÚ¼¼È÷ º¸±âÇÏ¸é ´Ù¸¥ ÇÔ¼ö·Î ¿À¹ö·ÎµùµÊ" << "n";
+	cout << "3. cout í•¨ìˆ˜ ì˜¤ë²„ë¡œë”©, coutí•¨ìˆ˜ ìì„¸íˆ ë³´ê¸°í•˜ë©´ ë‹¤ë¥¸ í•¨ìˆ˜ë¡œ ì˜¤ë²„ë¡œë”©ë¨" << "n";
 	std::cout << 'a' << "\n";
 	std::cout << (int)'a' << "\n";
 }
@@ -1084,37 +1084,37 @@ void gameOverBySignal(int signal)
 	std::cout << "game over" << "\n";
 }
 void functionPointerSummary() {
-	// ÇÔ¼öµµ ÀĞ±â Àü¿ë ¸Ş¸ğ¸® ºí·°¿¡ Á¸ÀçÇÔ => ÁÖ¼Ò¸¦ °¡Á®¿Ã ¼ö ÀÖÀ»±î?
-	// ÇÔ¼öÀÇ ÁÖ¼Ò´Â? ÇÔ¼ö°¡ Æ÷ÇÔµÈ ±â°è¾î ÄÚµå ¸Ş¸ğ¸®ºí·ÏÀÇ ½ÃÀÛ ÁÖ¼Ò¿¡ µé¾î°¨
-	std::cout << "1. ÇÔ¼ö Æ÷ÀÎÅÍ " << "\n";
-	int (*f)(int, int) = &sum; // int* f(int,int)´Â intÆ÷ÀÎÅÍ¸¦ ¹İÈ¯ÇÏ´Â°Å¶ó (*f)ÇØ¾ßÇÔ
-	int (*f2)(int, int) = sum; // &¾È½áµµ ÇÔ¼ö´Â Çã¿ëÇØÁÜ
+	// í•¨ìˆ˜ë„ ì½ê¸° ì „ìš© ë©”ëª¨ë¦¬ ë¸”ëŸ­ì— ì¡´ì¬í•¨ => ì£¼ì†Œë¥¼ ê°€ì ¸ì˜¬ ìˆ˜ ìˆì„ê¹Œ?
+	// í•¨ìˆ˜ì˜ ì£¼ì†ŒëŠ”? í•¨ìˆ˜ê°€ í¬í•¨ëœ ê¸°ê³„ì–´ ì½”ë“œ ë©”ëª¨ë¦¬ë¸”ë¡ì˜ ì‹œì‘ ì£¼ì†Œì— ë“¤ì–´ê°
+	std::cout << "1. í•¨ìˆ˜ í¬ì¸í„° " << "\n";
+	int (*f)(int, int) = &sum; // int* f(int,int)ëŠ” intí¬ì¸í„°ë¥¼ ë°˜í™˜í•˜ëŠ”ê±°ë¼ (*f)í•´ì•¼í•¨
+	int (*f2)(int, int) = sum; // &ì•ˆì¨ë„ í•¨ìˆ˜ëŠ” í—ˆìš©í•´ì¤Œ
 	std::cout << (*f)(1, 2) << "\n";
-	std::cout << f(1, 3) << "\n"; // ¿ªÂüÁ¶°¡ ¾ø¾îµµ Çã¿ëÇØÁÜ
+	std::cout << f(1, 3) << "\n"; // ì—­ì°¸ì¡°ê°€ ì—†ì–´ë„ í—ˆìš©í•´ì¤Œ
 
-	std::cout << "2. ÇÔ¼ö reference" << "\n";
+	std::cout << "2. í•¨ìˆ˜ reference" << "\n";
 	int(&r)(int, int) = sum;
 	std::cout << r(4, 6) << "\n";
 
-	// ÇÔ¼ö´Â ¿ªÂüÁ¶ÇÏ¸é ÇÔ¼ö°¡µÊ....
+	// í•¨ìˆ˜ëŠ” ì—­ì°¸ì¡°í•˜ë©´ í•¨ìˆ˜ê°€ë¨....
 	std::cout << (*r)(4, 7) << "\n";
 	std::cout << (*sum)(1, 2) << "\n";
 
-	std::cout << "3. ·Î±×ÀÎ ±â´É ±¸ÇöÇÏ±â" << "\n";
-	// ÇÔ¼ö Æ÷ÀÎÅÍ¸¦ ¹Ş´Â ¹è¿­
+	std::cout << "3. ë¡œê·¸ì¸ ê¸°ëŠ¥ êµ¬í˜„í•˜ê¸°" << "\n";
+	// í•¨ìˆ˜ í¬ì¸í„°ë¥¼ ë°›ëŠ” ë°°ì—´
 	bool (*callbacks[])(std::string, std::string) {
 		onLogin, onRegister, onDelete, onUpdate  // 0,1,2,3
 	};
 
-	// (int)RequestType::Login = 0ÀÌ´Ï±î callbacks[0]("david","1234") ÀÌ·¸°Ô ½ÇÇà
+	// (int)RequestType::Login = 0ì´ë‹ˆê¹Œ callbacks[0]("david","1234") ì´ë ‡ê²Œ ì‹¤í–‰
 	callbacks[(int)RequestType::Login]("david", "1234");
 	callbacks[(int)RequestType::Login]("John", "2222");
 	callbacks[(int)RequestType::Delete]("david", "1234");
-	// callbacks[(int)RequestType::Update]("John", "3333", "1234"); ÀÌ·±°Ç ¾î¶»°Ô ÇÒ±î?
+	// callbacks[(int)RequestType::Update]("John", "3333", "1234"); ì´ëŸ°ê±´ ì–´ë–»ê²Œ í• ê¹Œ?
 
-	std::cout << "4. ÄÉ¸¯ÅÍ Ã¼·Â ¸¸µé±â" << "\n";
-	Character character0{ 200, nullptr }; // ¸ó½ºÅÍ°¡ Á×À¸¸é °ÔÀÓ¿À¹ö ¾È¶ä
-	Character character1{ 200 , gameOver }; // ÇÃ·¹ÀÌ¾î°¡ Á×À¸¸é °ÔÀÓ¿À¹ö
+	std::cout << "4. ì¼€ë¦­í„° ì²´ë ¥ ë§Œë“¤ê¸°" << "\n";
+	Character character0{ 200, nullptr }; // ëª¬ìŠ¤í„°ê°€ ì£½ìœ¼ë©´ ê²Œì„ì˜¤ë²„ ì•ˆëœ¸
+	Character character1{ 200 , gameOver }; // í”Œë ˆì´ì–´ê°€ ì£½ìœ¼ë©´ ê²Œì„ì˜¤ë²„
 
 	damaged(character0);
 	damaged(character0);
@@ -1122,13 +1122,13 @@ void functionPointerSummary() {
 	damaged(character1);
 	damaged(character1);
 
-	std::cout << "5. ÇÔ¼ö Æ÷ÀÎÅÍ °°Àº ±äÅ¸ÀÓÀÇ ¼±¾ğÀº auto·Î ÇÏ¸é ÆíÇÏ´Ù" << "\n";
+	std::cout << "5. í•¨ìˆ˜ í¬ì¸í„° ê°™ì€ ê¸´íƒ€ì„ì˜ ì„ ì–¸ì€ autoë¡œ í•˜ë©´ í¸í•˜ë‹¤" << "\n";
 	auto f5 = &gameOver; // void (*)()
-	auto f6 = gameOver; // ¾Ë¾Æ¼­ ÇüÀ» ¸ÂÃçÁÜ, ÇÔ¼öÆ÷ÀÎÅÍ´Â ÁÖ¼Ò¸¦ ¾ÈÀû¾îµµ µÈ´Ù.
+	auto f6 = gameOver; // ì•Œì•„ì„œ í˜•ì„ ë§ì¶°ì¤Œ, í•¨ìˆ˜í¬ì¸í„°ëŠ” ì£¼ì†Œë¥¼ ì•ˆì ì–´ë„ ëœë‹¤.
 	auto& f7 = gameOver;
 
 
-	std::cout << "6. callableÇÏ°Ô »ç¿ëÇÏ±â.." << "\n";
+	std::cout << "6. callableí•˜ê²Œ ì‚¬ìš©í•˜ê¸°.." << "\n";
 	std::function<void()> fff = gameOver;
 	std::function<void(int)> ff = gameOverBySignal;
 	ff(1);

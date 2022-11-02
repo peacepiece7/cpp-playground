@@ -25,18 +25,18 @@ int main() {
 
 void intro() {
 	using namespace std;
-	cout << "1. opp, ÀıÂ÷ ÁöÇâ ºñ±³" << "\n";
+	cout << "1. opp, ì ˆì°¨ ì§€í–¥ ë¹„êµ" << "\n";
 	// opp
-	string s0 = "Hello, ";// ¹®ÀÚ °³¼ö¸¦ ½Å°æ¾µ ÇÊ¿ä ¾øÀ½
+	string s0 = "Hello, ";// ë¬¸ì ê°œìˆ˜ë¥¼ ì‹ ê²½ì“¸ í•„ìš” ì—†ìŒ
 	string s1 = "world!";
-	s0.append(s1); // string °´Ã¼´Â append¶ó´Â ¸Ş¼­µå¸¦ °¡Áü, Àß Â¥¿©Áø ÄÚµå´Â ¿µ¹®Àå°°Àº ´À³¦ÀÌ µë, ³»ºÎÀû ±¸ÇöÀÌ ¼û°ÜÁü
+	s0.append(s1); // string ê°ì²´ëŠ” appendë¼ëŠ” ë©”ì„œë“œë¥¼ ê°€ì§, ì˜ ì§œì—¬ì§„ ì½”ë“œëŠ” ì˜ë¬¸ì¥ê°™ì€ ëŠë‚Œì´ ë“¬, ë‚´ë¶€ì  êµ¬í˜„ì´ ìˆ¨ê²¨ì§
 	cout << s0 << endl;
-	s0 += s1; // °´Ã¼°£ÀÇ ¿¬»ê°úÁ¤ÀÌ Ãß»óÈ­ µÇ¾î ÀÖÀ½
+	s0 += s1; // ê°ì²´ê°„ì˜ ì—°ì‚°ê³¼ì •ì´ ì¶”ìƒí™” ë˜ì–´ ìˆìŒ
 
-	// ÀıÀÚ ÁöÇâ
-	char s2[100] = "hello, "; // 100°³ ¹®ÀÚ ÀÌÇÏ¿©¾ßÇÑ´Ù´Â°É ½Å°æ½á¾ßÇÔ
+	// ì ˆì ì§€í–¥
+	char s2[100] = "hello, "; // 100ê°œ ë¬¸ì ì´í•˜ì—¬ì•¼í•œë‹¤ëŠ”ê±¸ ì‹ ê²½ì¨ì•¼í•¨
 	char s3[] = "world!";
-	strcat(s2, s3); // ÀıÂ÷ ÁöÇâÀûÄÚµå s2, s3 ÁÖ¾î¸¦ ¸ğ¸£°ÚÀ½
+	strcat(s2, s3); // ì ˆì°¨ ì§€í–¥ì ì½”ë“œ s2, s3 ì£¼ì–´ë¥¼ ëª¨ë¥´ê² ìŒ
 	cout << s2 << endl;
 }
 
@@ -54,7 +54,7 @@ public:
 public:
 	int health;
 	void attack(Player2& target) {
-		// °°Àº Å¬·¹½º ³»¿¡¼­´Â private¿¡ Á¢±ÙÇÒ ¼ö ÀÖÀ½(target._name) == privateÀº °°Àº ·¹º§¿¡¼± »ç¿ëÇÒ ¼ö ÀÖÀ½
+		// ê°™ì€ í´ë ˆìŠ¤ ë‚´ì—ì„œëŠ” privateì— ì ‘ê·¼í•  ìˆ˜ ìˆìŒ(target._name) == privateì€ ê°™ì€ ë ˆë²¨ì—ì„  ì‚¬ìš©í•  ìˆ˜ ìˆìŒ
 		std::cout << "Attack " << _name << "->" << target._name << "\n";
 		target.damaged(_power);
 	}
@@ -71,15 +71,15 @@ private:
 	int _power;
 	std::string _name;
 public:
-	// constructor(»ı¼ºÀÚ), ¸®ÅÏ Å¸ÀÔÀÌ ¾ø´Â ÇÔ¼ö
+	// constructor(ìƒì„±ì), ë¦¬í„´ íƒ€ì…ì´ ì—†ëŠ” í•¨ìˆ˜
 	Player3(int health, int power, std::string name) {
 		_health = health;
 		_power = power;
 		_name = name;
 	}
 	int health;
-	void attack(Player3& target) { // ¸É¹öÇÔ¼ö || ¸Ş¼­µå
-		// °°Àº Å¬·¹½º ³»¿¡¼­´Â private¿¡ Á¢±ÙÇÒ ¼ö ÀÖÀ½(target._name) == privateÀº °°Àº ·¹º§¿¡¼± »ç¿ëÇÒ ¼ö ÀÖÀ½
+	void attack(Player3& target) { // ë§´ë²„í•¨ìˆ˜ || ë©”ì„œë“œ
+		// ê°™ì€ í´ë ˆìŠ¤ ë‚´ì—ì„œëŠ” privateì— ì ‘ê·¼í•  ìˆ˜ ìˆìŒ(target._name) == privateì€ ê°™ì€ ë ˆë²¨ì—ì„  ì‚¬ìš©í•  ìˆ˜ ìˆìŒ
 		std::cout << "Attack " << _name << "->" << target._name << "\n";
 		target.damaged(_power);
 	}
@@ -92,36 +92,36 @@ public:
 void classAndStructSummary() {
 	using namespace std;
 
-	cout << "1. Å¬·¹½º ¼±¾ğ" << "\n";
-	Player1 player0; // player0´Â PlayerÀÇ ÀÎ½ºÅÏ½º
+	cout << "1. í´ë ˆìŠ¤ ì„ ì–¸" << "\n";
+	Player1 player0; // player0ëŠ” Playerì˜ ì¸ìŠ¤í„´ìŠ¤
 
-	cout << "2. calss struct Â÷ÀÌÁ¡" << "\n";
-	// struct´Â
-	// Player player0{10,20}; ÃÊ±âÈ­ °¡´É
-	// player0.health = 10; Á¢±Ù°¡´É
+	cout << "2. calss struct ì°¨ì´ì " << "\n";
+	// structëŠ”
+	// Player player0{10,20}; ì´ˆê¸°í™” ê°€ëŠ¥
+	// player0.health = 10; ì ‘ê·¼ê°€ëŠ¥
 
-	// class´Â public:ÀÌ¶ó´Â ·¹ÀÌ¾î ¾È¿¡ ÀÛ¼ºÇØÁà¾ß¸¸ Á¢±Ù, ÃÊ±âÈ­ °¡´É
+	// classëŠ” public:ì´ë¼ëŠ” ë ˆì´ì–´ ì•ˆì— ì‘ì„±í•´ì¤˜ì•¼ë§Œ ì ‘ê·¼, ì´ˆê¸°í™” ê°€ëŠ¥
 	player0._health = 10;
-	// player0.power Á¢±Ù ºÒ°¡´É
+	// player0.power ì ‘ê·¼ ë¶ˆê°€ëŠ¥
 
 
-	cout << "3. ÇÃ·¹ÀÌ¾î ‹š¸®±â" << "\n";
+	cout << "3. í”Œë ˆì´ì–´ ë–„ë¦¬ê¸°" << "\n";
 	Player2 david{ 200,100,"David" };
 	Player2 daniel{ 200,100,"Daniel" };
 	
 	david.attack(daniel);
 	david.attack(daniel);
 
-	david._health -= 200; // publicÀ¸·Î µ¥ÀÌÅÍ¸¦ ¿ÜºÎ¿¡ ³ëÃâÇÏ¸é david,_health -= 200; ÀÌ·²¼öµµÀÖÀ½
+	david._health -= 200; // publicìœ¼ë¡œ ë°ì´í„°ë¥¼ ì™¸ë¶€ì— ë…¸ì¶œí•˜ë©´ david,_health -= 200; ì´ëŸ´ìˆ˜ë„ìˆìŒ
 
-	cout << "4. privateÀ¸·Î _health¼û±â±â" << "\n";
+	cout << "4. privateìœ¼ë¡œ _healthìˆ¨ê¸°ê¸°" << "\n";
 	Player3 john{ 200,100,"John" };
 	Player3 bob{ 200,100,"Bob" };
 
-	john.attack(bob); // Ãß»óÈ­ (attack ³»ºÎ ·ÎÁ÷À» °¨Ãã)
+	john.attack(bob); // ì¶”ìƒí™” (attack ë‚´ë¶€ ë¡œì§ì„ ê°ì¶¤)
 	john.attack(bob);
 
-	// john._health -= 200; ÀÌÁ¦ Á¢±Ù ºÒ°¡´É!
+	// john._health -= 200; ì´ì œ ì ‘ê·¼ ë¶ˆê°€ëŠ¥!
 }
 
 class Player4 {
@@ -133,39 +133,39 @@ public:
 	Player4(int health, int power) {
 		_health = health;
 		_power = power;
-		std::cout << "ÆÄ¶ó¸ŞÅÍ°¡ ÀÖ´Â Player :" << _health << ", " << _power << std::endl;
+		std::cout << "íŒŒë¼ë©”í„°ê°€ ìˆëŠ” Player :" << _health << ", " << _power << std::endl;
 	};
-	// »ı¼ºÀÚ ¿À¹ö·Îµù
+	// ìƒì„±ì ì˜¤ë²„ë¡œë”©
 	Player4() {
 		_health = 10;
 		_power = 5;
-		std::cout << "µğÆúÆ® Player :" << _health << ", " << _power << "\n";
+		std::cout << "ë””í´íŠ¸ Player :" << _health << ", " << _power << "\n";
 	}
 };
-class Æ¯º°»ı¼ºÀÚ {
+class íŠ¹ë³„ìƒì„±ì {
 public:
 	int _test;
 };
 class Player5 {
 private:
-	// µğÆúÆ® »ı¼ºÀÚ ÇÔ¼ö°¡ ¾øÀ¸¸é ¿©±â¿¡ ÃÊ±âÈ­ ÇÑ °ªÀÌ ÁöÁ¤µÊ(µğÆúÆ® »ı¸¦ Áö¿ì°í ½ÇÇà ½ÃÄÑº¸ÀÚ)
+	// ë””í´íŠ¸ ìƒì„±ì í•¨ìˆ˜ê°€ ì—†ìœ¼ë©´ ì—¬ê¸°ì— ì´ˆê¸°í™” í•œ ê°’ì´ ì§€ì •ë¨(ë””í´íŠ¸ ìƒë¥¼ ì§€ìš°ê³  ì‹¤í–‰ ì‹œì¼œë³´ì)
 	int _health = 100;
 	int _power = 200;
 	const std::string _name ="Undefined";
 public:
-	Player5() : Player5(100, 50, "noname") // À§ÀÓ »ı¼ºÀÚ, :_heath(1000) // À¸·Î ÃÊ±âÈ­ÇÏ¸é ³ª¸ÓÁö´Â privateÀÇ °ªÀÌ Àû¿ëµÊ
+	Player5() : Player5(100, 50, "noname") // ìœ„ì„ ìƒì„±ì, :_heath(1000) // ìœ¼ë¡œ ì´ˆê¸°í™”í•˜ë©´ ë‚˜ë¨¸ì§€ëŠ” privateì˜ ê°’ì´ ì ìš©ë¨
 	{
-		// Player5(100,50) =>  Player5 player = Player5(100,50)ÀÌ·± ÀÎ½ºÅÏ½º¸¦ ´Ù½Ã ¸¸µå´Â °ÅÀÓ Àû¿ë x
+		// Player5(100,50) =>  Player5 player = Player5(100,50)ì´ëŸ° ì¸ìŠ¤í„´ìŠ¤ë¥¼ ë‹¤ì‹œ ë§Œë“œëŠ” ê±°ì„ ì ìš© x
 	}
-	// Player5() = default; ·Î µğÆúÆ® »ı¼ºÀÚÇÔ¼ö ½ÇÇà °¡´É
+	// Player5() = default; ë¡œ ë””í´íŠ¸ ìƒì„±ìí•¨ìˆ˜ ì‹¤í–‰ ê°€ëŠ¥
 	Player5(int health, int power, std::string name)
 		: _health(health), _power(power), _name(name) 
-		// = ¿¬»êÀÚ·Î(´ëÀÔ¿¬»ê) const char¸¦ ÃÊ±âÈ­ ÇÒ ¼ö¾øÀ»°æ¿ì ¿·°ú°°ÀÌ ÃÊ±âÈ­ (member initialize list, ¸É¹ö ÃÊ±âÈ­ ¸®½ºÆ®), ÂüÁ¶µµ ÀÌ·¸°Ô ÃÊ±âÈ­ÇÔ
-		// Á÷Á¢ ÃÊ±âÈ­ÇÏ´Â°Å¶ó ¼º´ÉÀÇ ÀÌÁ¡ÀÌ ÀÖÀ½
+		// = ì—°ì‚°ìë¡œ(ëŒ€ì…ì—°ì‚°) const charë¥¼ ì´ˆê¸°í™” í•  ìˆ˜ì—†ì„ê²½ìš° ì˜†ê³¼ê°™ì´ ì´ˆê¸°í™” (member initialize list, ë§´ë²„ ì´ˆê¸°í™” ë¦¬ìŠ¤íŠ¸), ì°¸ì¡°ë„ ì´ë ‡ê²Œ ì´ˆê¸°í™”í•¨
+		// ì§ì ‘ ì´ˆê¸°í™”í•˜ëŠ”ê±°ë¼ ì„±ëŠ¥ì˜ ì´ì ì´ ìˆìŒ
 	{
-		// _health = health; => ÃÊ±âÈ­ ÈÄ ´ëÀÔ¿¬»êÀÌ¶ó¼­ ¼º´ÉÀÌ ¾ÈÁÁÀ½
+		// _health = health; => ì´ˆê¸°í™” í›„ ëŒ€ì…ì—°ì‚°ì´ë¼ì„œ ì„±ëŠ¥ì´ ì•ˆì¢‹ìŒ
 		// _power = power;
-		// _name = name; ºÒ°¡´É!
+		// _name = name; ë¶ˆê°€ëŠ¥!
 		std::cout << "Player :"<< _name << ", " << _health << ", " << _power << "\n";
 	}
 	void print() {
@@ -175,27 +175,27 @@ public:
 void constructorSummary() {
 	using namespace std;
 
-	cout << "1. ´Ù¾çÇÑ ¼±¾ğ ¹æ¹ı" << "\n";
+	cout << "1. ë‹¤ì–‘í•œ ì„ ì–¸ ë°©ë²•" << "\n";
 	Player4 player0(100, 50);
 	Player4 player1 = Player4(100, 50);
 	Player4* player2 = new Player4(100, 50);
 
-	cout << "2. »ı¼ºÀÚ ¿À¹ö·Îµù (default »ı¼ºÀÚ¸¦ ÀÚ¿ì¸é ¾Æ·¡ ÇÃ·¹ÀÌ¾î´Â ¿¡·¯°¡ ¶ä)" << "\n";
+	cout << "2. ìƒì„±ì ì˜¤ë²„ë¡œë”© (default ìƒì„±ìë¥¼ ììš°ë©´ ì•„ë˜ í”Œë ˆì´ì–´ëŠ” ì—ëŸ¬ê°€ ëœ¸)" << "\n";
 	Player4 player3;
 	Player4 player4 = Player4();
 	Player4* player5 = new Player4;
 
-	cout << "3. Æ²º° »ı¼ºÀÚ ÇÔ¼ö" << "\n";
-	// ÄÄÆÄÀÏ·¯°¡ ¾Ë¾Æ¼­ default »ı¼ºÀÚ¸¦ ¸¸µé°í ÃÊ±âÈ­¸¦ ¾Ï½ÄÀûÀ¸·Î ½ÃÄÑÁÜ
-	Æ¯º°»ı¼ºÀÚ sp; 
+	cout << "3. í‹€ë³„ ìƒì„±ì í•¨ìˆ˜" << "\n";
+	// ì»´íŒŒì¼ëŸ¬ê°€ ì•Œì•„ì„œ default ìƒì„±ìë¥¼ ë§Œë“¤ê³  ì´ˆê¸°í™”ë¥¼ ì•”ì‹ì ìœ¼ë¡œ ì‹œì¼œì¤Œ
+	íŠ¹ë³„ìƒì„±ì sp; 
 	Player5 player6;
 
-	cout << "4. ÃÊ±âÈ­" << "\n";
+	cout << "4. ì´ˆê¸°í™”" << "\n";
 	player6.print();
 
 }
 
-// Ä¿ÇÇ¸¦ »ç´Â ·ÎÁ÷ ´ëÃæ ¸¸µé¾îº½!
+// ì»¤í”¼ë¥¼ ì‚¬ëŠ” ë¡œì§ ëŒ€ì¶© ë§Œë“¤ì–´ë´„!
 class User {
 private:
 	const std::string _name;
@@ -208,7 +208,7 @@ public:
 	int getCoinOnHand(int coins)
 	{
 		std::cout << "getCoinOnHand" << "\n";
-		if (coins <= 0) return 0; // ÄÚÀÎÀÌ À½¼öÀÏ °æ¿ì 0À» ¹İÈ¯
+		if (coins <= 0) return 0; // ì½”ì¸ì´ ìŒìˆ˜ì¼ ê²½ìš° 0ì„ ë°˜í™˜
 		if (_coins - coins < 0)
 		{
 			coins = _coins;
@@ -268,16 +268,16 @@ public:
 			std::cout << "push the button : " << menu << ", price : " << _menuList[menu].price << ", stack : " << _menuList[menu].stack << "\n";
 			if (_earnedCoins - _menuList[menu].price < 0) 
 			{
-				std::cout << "µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù. " << menu << " Inserted coins :" << _earnedCoins << ", price :" << _menuList[menu].price << "\n";
+				std::cout << "ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤. " << menu << " Inserted coins :" << _earnedCoins << ", price :" << _menuList[menu].price << "\n";
 				return 0;
 			}
 			else if(_menuList[menu].stack <= 0) 
 			{
-				std::cout << menu << "ÀÇ Àç°í°¡ ºÎÁ·ÇÕ´Ï´Ù" << "\n";
+				std::cout << menu << "ì˜ ì¬ê³ ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤" << "\n";
 				return 0;
 			}
 			else {
-				std::cout << menu << "°¡ ³ª¿Ô½À´Ï´Ù. ÀÜµ·ÀÌ ¹İÈ¯µË´Ï´Ù. ¸ÀÀÖ°Ô µå¼¼¿ä." << "\n";
+				std::cout << menu << "ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤. ì”ëˆì´ ë°˜í™˜ë©ë‹ˆë‹¤. ë§›ìˆê²Œ ë“œì„¸ìš”." << "\n";
 				--_menuList[menu].stack;
 				int remainder = _earnedCoins - _menuList[menu].price;
 				_earnedCoins = 0;
@@ -309,10 +309,10 @@ void buyCoffee() {
 	std::cout << "remainder :" << remainder << "\n";
 	coffeeMachine.checkEarnedCoins();
 	coffeeMachine.checkStackAndPrice();
-	// ÀÜµ· ¹İÈ¯, ÁÖ¸Ó´Ï¿¡ ³ª¸ÓÁö ±İ¾× ³Ö±â ¾È¸¸µë..!
+	// ì”ëˆ ë°˜í™˜, ì£¼ë¨¸ë‹ˆì— ë‚˜ë¨¸ì§€ ê¸ˆì•¡ ë„£ê¸° ì•ˆë§Œë“¬..!
 }
 
-//! cout ÁÖ¼® Ç®°í º¸ÀÚ
+//! cout ì£¼ì„ í’€ê³  ë³´ì
 class Player6 {
 private:
 	int _num;
@@ -322,9 +322,9 @@ public:
 		//std::cout << "Constructor :" << _num << std::endl;
 	}
 	~Player6() 
-	// destructor Á¤ÀÇ, Á¤ÀÇÇÏÁö ¾ÊÀ¸¸é ÄÄÆÄÀÏ·¯°¡ ¾Ï½ÃÀûÀ¸·Î ¼Ò¸êÀÚ¸¦ »ı¼ºÇÔ, 
-	// ~Player6() deleteÀÌ·¸°ÔÇÏ¸é ÄÄÆÄÀÏ·¯°¡ ¼Ò¸êÀÚ¸¦ ¸¸µéÁö ¸øÇØ¼­ ÀÎ½ºÅÏ½º¸¦ ¸¸µé ¼ö ¾øÀ½
-	// ÀÌ °æ¿ì, Å¬·¡½º Æ÷ÀÎÅÍ¿¡ µ¿Àû ÇÒ´çÀ» ÇÒ ¼ö ÀÖÀ¸³ª Å¬·¡½º Æ÷ÀÎÅÍ°¡ °¡¸£Å°´Â ¸Ş¸ğ¸®¸¦ deleteÇÒ ¼ö ¾øÀ½,,,,
+	// destructor ì •ì˜, ì •ì˜í•˜ì§€ ì•Šìœ¼ë©´ ì»´íŒŒì¼ëŸ¬ê°€ ì•”ì‹œì ìœ¼ë¡œ ì†Œë©¸ìë¥¼ ìƒì„±í•¨, 
+	// ~Player6() deleteì´ë ‡ê²Œí•˜ë©´ ì»´íŒŒì¼ëŸ¬ê°€ ì†Œë©¸ìë¥¼ ë§Œë“¤ì§€ ëª»í•´ì„œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ë§Œë“¤ ìˆ˜ ì—†ìŒ
+	// ì´ ê²½ìš°, í´ë˜ìŠ¤ í¬ì¸í„°ì— ë™ì  í• ë‹¹ì„ í•  ìˆ˜ ìˆìœ¼ë‚˜ í´ë˜ìŠ¤ í¬ì¸í„°ê°€ ê°€ë¥´í‚¤ëŠ” ë©”ëª¨ë¦¬ë¥¼ deleteí•  ìˆ˜ ì—†ìŒ,,,,
 	{
 		//std::cout << "Destructor :" << _num << std::endl; 
 	}
@@ -332,22 +332,22 @@ public:
 Player6 player00 = Player6(0);
 Player6* player01 = new Player6(1);
 void func() {
-	static Player6 player02 = Player6(2); // Á¤ÀûÀ¸·Î »ı¼ºÇÏ¸é ÇÁ·Î±×·¥ÀÌ Á¾·áµÉ ¶§ ±îÁö Á¸Àç
+	static Player6 player02 = Player6(2); // ì •ì ìœ¼ë¡œ ìƒì„±í•˜ë©´ í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë  ë•Œ ê¹Œì§€ ì¡´ì¬
 
 }
 void destructorSummary() {
 	Player6 player03 = Player6(3);
 	Player6* player04 = new Player6(4);
 	{
-		Player6 player05 = Player6(5); // ½ºÄÚÇÁ¸¦ ¹ş¾î³ª¸é ÆÄ±«µÊ
-		Player6* player06 = new Player6(6); // ½ºÄÚÇÁ¸¦ ¹ş¾î³ªµµ ÆÄ±«µÇÁö ¾ÊÀ½, Áö¿öÁà¾ßÇÔ
+		Player6 player05 = Player6(5); // ìŠ¤ì½”í”„ë¥¼ ë²—ì–´ë‚˜ë©´ íŒŒê´´ë¨
+		Player6* player06 = new Player6(6); // ìŠ¤ì½”í”„ë¥¼ ë²—ì–´ë‚˜ë„ íŒŒê´´ë˜ì§€ ì•ŠìŒ, ì§€ì›Œì¤˜ì•¼í•¨
 	}
-	delete player01; // ¸Ş¸ğ¸®¸¦ Á¦°ÅÇÏ¸é destructor°¡ ÀÛµ¿
-	// free(player01); // Àº µ¿ÀÛÇÏÁö ¾Ê´Âµ¥ ¿ÖÁö?
+	delete player01; // ë©”ëª¨ë¦¬ë¥¼ ì œê±°í•˜ë©´ destructorê°€ ì‘ë™
+	// free(player01); // ì€ ë™ì‘í•˜ì§€ ì•ŠëŠ”ë° ì™œì§€?
 	func();
-	func(); // staticÀ¸·Î ¼±¾ğÇØ¼­ µÎ ¹ø È£ÃâÇÏÁö¸¸ ÇÑ ¹ø¸¸ »ı¼º
+	func(); // staticìœ¼ë¡œ ì„ ì–¸í•´ì„œ ë‘ ë²ˆ í˜¸ì¶œí•˜ì§€ë§Œ í•œ ë²ˆë§Œ ìƒì„±
 
-	// ÇÁ·Î±×·¥ÀÌ Á¾·áµÇ°í 03, 02, 00¼ø¼­´ë·Î ÆÄ±«
+	// í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë˜ê³  03, 02, 00ìˆœì„œëŒ€ë¡œ íŒŒê´´
 }
 
 class String {
@@ -365,7 +365,7 @@ public:
 	}
 	~String() {
 		delete[] _str;
-		// free(_str); => ¸Ş¸ğ¸® È®ÀÎÇØº¸¸é »èÁ¦ ÀßµÊ 
+		// free(_str); => ë©”ëª¨ë¦¬ í™•ì¸í•´ë³´ë©´ ì‚­ì œ ì˜ë¨ 
 	}
 };
 void destructorSummary2() {
@@ -375,8 +375,8 @@ void destructorSummary2() {
 
 }
 
-// C++, one definition role (Á¤ÀÇ´Â ÇÑ¹ø¸¸ °¡´É)
-// ´Ù¸¸, ¶È°°ÀÌ ¸¸µé¸é µ¹¾Æ°¨
+// C++, one definition role (ì •ì˜ëŠ” í•œë²ˆë§Œ ê°€ëŠ¥)
+// ë‹¤ë§Œ, ë˜‘ê°™ì´ ë§Œë“¤ë©´ ëŒì•„ê°
 class Person
 {
 private:
@@ -395,24 +395,24 @@ public:
 void DeclarationAndDefinitionSummary() {
 	std::cout << "1. Declaration" << "\n";
 	// Declaration
-	// 1. Defining Declaration, Def Definition (Á¤ÀÇ) => Á¤ÀÇ¸¦ Æ÷ÇÔÇÏ´Â ¼±¾ğ (ÇÔ¼ö ¼±¾ğ)
-	// 2. Referencing Declaration, Declaration (¼±¾ğ) => Á¤ÀÇ°¡ Æ÷ÇÔµÇÁö ¾Ê´Â ¼±¾ğ (ÇÁ·ÎÅä Å¸ÀÔ ¼±¾ğ)
+	// 1. Defining Declaration, Def Definition (ì •ì˜) => ì •ì˜ë¥¼ í¬í•¨í•˜ëŠ” ì„ ì–¸ (í•¨ìˆ˜ ì„ ì–¸)
+	// 2. Referencing Declaration, Declaration (ì„ ì–¸) => ì •ì˜ê°€ í¬í•¨ë˜ì§€ ì•ŠëŠ” ì„ ì–¸ (í”„ë¡œí†  íƒ€ì… ì„ ì–¸)
 	
-	int x; // 1¹ø (Á¤ÀÇ°¡ Æ÷ÇÔµÇ¾î¼­ ¹Ù·Î »ç¿ë°¡´É)
+	int x; // 1ë²ˆ (ì •ì˜ê°€ í¬í•¨ë˜ì–´ì„œ ë°”ë¡œ ì‚¬ìš©ê°€ëŠ¥)
 	x = 10; 
 
-	// void func(){ ...logic }; => 1. Á¤ÀÇ
-	// void func(); => 2. ¼±¾ğ
-	std::cout << "2. Çì´õÆÄÀÏ¾øÀÌ Å¬·¡½º ÀÏÀÏÀÌ °ü¸®" << "\n";
+	// void func(){ ...logic }; => 1. ì •ì˜
+	// void func(); => 2. ì„ ì–¸
+	std::cout << "2. í—¤ë”íŒŒì¼ì—†ì´ í´ë˜ìŠ¤ ì¼ì¼ì´ ê´€ë¦¬" << "\n";
 	Person p(55.5f, 155.5f, "david");
 	p.print();
-	std::cout << "3. includeÇÑ Çì´õÆÄÀÏ »ç¿ëÇÏ±â" << "\n";
+	std::cout << "3. includeí•œ í—¤ë”íŒŒì¼ ì‚¬ìš©í•˜ê¸°" << "\n";
 	Person p1(55.5f, 155.5f, "header : david ");
 	p1.print();
 
-	std::cout << "4. functionÀ» Çì´õÆÄÀÏ¿¡ Á¤ÀÇÇÏ±â" << "\n";
-	// functionÀº Á¤ÀÇ¸¦ ÇÑ ¹ø ¸¸ ÇÒ ¼ö ÀÖ´Âµ¥ Çì´õ¿¡ ÇÔ¼ö¸¦ Á¤ÀÇÇÏ°í ¿©·¯ ÆÄÀÏ¿¡ includeÇÏ¸é?
-	// => ¿©·¯¹ø Á¤ÀÇµÇ´Ï±î ´ç¿¬È÷ ¿¡·¯³² => PersonHeader.cpp (PersonHeader.h¿Í ÀÌ¸§À» °°°Ô, ÄÁº¥¼ÇÀÓ)¸¦ ¸¸µé¾î¼­ ÇÔ¼ö¸¦ ¼±¾ğÇØÁÖ¸éµÊ
+	std::cout << "4. functionì„ í—¤ë”íŒŒì¼ì— ì •ì˜í•˜ê¸°" << "\n";
+	// functionì€ ì •ì˜ë¥¼ í•œ ë²ˆ ë§Œ í•  ìˆ˜ ìˆëŠ”ë° í—¤ë”ì— í•¨ìˆ˜ë¥¼ ì •ì˜í•˜ê³  ì—¬ëŸ¬ íŒŒì¼ì— includeí•˜ë©´?
+	// => ì—¬ëŸ¬ë²ˆ ì •ì˜ë˜ë‹ˆê¹Œ ë‹¹ì—°íˆ ì—ëŸ¬ë‚¨ => PersonHeader.cpp (PersonHeader.hì™€ ì´ë¦„ì„ ê°™ê²Œ, ì»¨ë²¤ì…˜ì„)ë¥¼ ë§Œë“¤ì–´ì„œ í•¨ìˆ˜ë¥¼ ì„ ì–¸í•´ì£¼ë©´ë¨
 	foo(); 
 
 	

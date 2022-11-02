@@ -3,17 +3,17 @@
 #include "PersonHeader.h"
 using namespace std; 
 
-// ÇÔ¼ö Á¤ÀÇ
-// PersonHeader.h¿¡ ¼±¾ğµÇ¾î ÀÖ¾î¼­ PersonHeader.h¸¦ Æ÷ÇÔÇÏ´ÂÆÄÀÏ¿¡¼­ ¾îµğµçÁö foo¸¦ È£Ãâ ÇÒ ¼ö ÀÖÀ½
+// í•¨ìˆ˜ ì •ì˜
+// PersonHeader.hì— ì„ ì–¸ë˜ì–´ ìˆì–´ì„œ PersonHeader.hë¥¼ í¬í•¨í•˜ëŠ”íŒŒì¼ì—ì„œ ì–´ë””ë“ ì§€ fooë¥¼ í˜¸ì¶œ í•  ìˆ˜ ìˆìŒ
 void foo() {
 	PersonHeader p(50.5f, 155.5f, "foo : daniel");
 	p.print();
 }
 
-// Å¬·¡½º Á¤ÀÇ
-// Å¬·¡½ºÀÇ ¼±¾ğÀº Çì´õÆÄÀÏ¿¡¼­ÇÏ°í, Å¬·¡½º ³» ÇÔ¼ö´Â ¿ÜºÎ¿¡¼­ Á¤ÀÇÇÒ ¼ö ÀÖÀ½
+// í´ë˜ìŠ¤ ì •ì˜
+// í´ë˜ìŠ¤ì˜ ì„ ì–¸ì€ í—¤ë”íŒŒì¼ì—ì„œí•˜ê³ , í´ë˜ìŠ¤ ë‚´ í•¨ìˆ˜ëŠ” ì™¸ë¶€ì—ì„œ ì •ì˜í•  ìˆ˜ ìˆìŒ
 PersonHeader::PersonHeader(float w, float h, const std::string& name) : _w(w), _h(h), _name(name) {
-	std::cout << "PersonHeaderÅ¬·¡½º »ı¼º" << "\n";
+	std::cout << "PersonHeaderí´ë˜ìŠ¤ ìƒì„±" << "\n";
 }
 void PersonHeader::print() {
 	std::cout << _name << "\n";
