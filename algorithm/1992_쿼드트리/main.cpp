@@ -31,26 +31,32 @@ void print() {
 	}
 }
 
-string go(int y, int x, int size) {
-	bool f = true;
+string go(int sy, int sx, int ey, int ex,int size) {
 	string a;
-	for (int i = y; i < size; i++) {
-		for (int j = x; j < size; j++) {
-			if (arr[i][j] != arr[y][x]) {
+	if(size == 1) {
+		return string(1, arr[sy][sx]);
+	}
+	bool f = true;
+	for (int i = sy; i < ey; i++) {
+		for (int j = sx; j < ex; j++) {
+			if (arr[i][j] != arr[sy][sx]) {
 				f = false;
+				a += "(";
+				a += go(sy, sx, ey/2-1, ex/2-1, size/2);
+				a += go(sy, sx+size/2, ey/2-1, ex, size/2);
+				a += go(sy+size/2, sx, ey, ex/2-1, size/2);
+				a += go(sy+size/2, sy+size/2, ey,ex, size/2);
+				a += ")";
 				break;
 			}
 		}
 	}
-	if (f) {
-		return string(1, arr[y][x]);
-	}
-	else {
-		a += "(";
-	}
+	if (f) return string(1, arr[sy][sx]);
+	else return a;
 }
 
 int main() {
+	ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 	cin >> n;
 	for (int i = 0; i < n; i++) {
 		cin >> s;
@@ -58,6 +64,7 @@ int main() {
 			arr[i][j] = s[j];
 		}
 	}
-	ret = go(0,0,n);
+	ret = go(0,0,n,n,n);
+	cout << ret << "\n";
 }
  
