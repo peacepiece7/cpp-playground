@@ -20,6 +20,11 @@
       "taskLabel": "task-cpp-playground",
       "appliesTo": "/",
       "type": "launch"
+    },
+    {
+      "taskLabel": "task-main",
+      "appliesTo": "algorithm/algorithm_비트마스킹/main.cpp",
+      "type": "launch"
     }
   ]
 }

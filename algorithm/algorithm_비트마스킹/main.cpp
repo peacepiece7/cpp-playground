@@ -20,16 +20,18 @@ void t1(){
 void t2(){
 	int n = 5;
 	int idx = 0;
+
 }
 
 void t3(){
 	int n = 6;
     // int idx = ?
+
 }
 
 void t4(){
 	int n = 4; 
- 
+
 }
 
 void t5(){
@@ -43,9 +45,8 @@ void t6(){
 	int idx = 0;   
     string yes = "yes";
     string no = "no";
+
 }
-
-
 
 int main() {   
 	t1();
@@ -101,6 +102,4 @@ void t6(){
 	string a = n & (1 << idx) ? "yes" : "no";
 	cout << "6. idx번째 비트가 있는지 확인하기 T6 : " << a << "\n";
 }
-
-
 */

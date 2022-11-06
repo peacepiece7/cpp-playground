@@ -5,6 +5,7 @@ int che[101];
 // 보통  최댓값이 10^5이하면 에라토스 테네스의 체 사용하고 넘으면 일일이 체크
 vector<int> era(int mx_n) {
 	vector<int> v;
+	// 거름망 만드는 코드
 	for (int i = 2; i <= mx_n; i++) {
 		if (che[i]) continue;
 		for (int j = 2 * i; j <= mx_n; j += i) {
