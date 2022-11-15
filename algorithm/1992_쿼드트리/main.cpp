@@ -36,23 +36,20 @@ string go(int sy, int sx, int ey, int ex,int size) {
 	if(size == 1) {
 		return string(1, arr[sy][sx]);
 	}
-	bool f = true;
 	for (int i = sy; i < ey; i++) {
 		for (int j = sx; j < ex; j++) {
 			if (arr[i][j] != arr[sy][sx]) {
-				f = false;
 				a += "(";
 				a += go(sy, sx, ey/2-1, ex/2-1, size/2);
 				a += go(sy, sx+size/2, ey/2-1, ex, size/2);
 				a += go(sy+size/2, sx, ey, ex/2-1, size/2);
 				a += go(sy+size/2, sy+size/2, ey,ex, size/2);
 				a += ")";
-				break;
+				return a;
 			}
 		}
 	}
-	if (f) return string(1, arr[sy][sx]);
-	else return a;
+	return string(1, arr[sy][sx]);
 }
 
 int main() {
