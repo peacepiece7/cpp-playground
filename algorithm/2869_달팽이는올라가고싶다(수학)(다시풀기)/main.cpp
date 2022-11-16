@@ -27,7 +27,6 @@ https://www.acmicpc.net/problem/2869
 100 99 1000000000
 예제 출력 3 
 999999901
-
 */
 
 #include <bits/stdc++.h>
