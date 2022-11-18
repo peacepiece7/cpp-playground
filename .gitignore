@@ -351,3 +351,7 @@ MigrationBackup/
 
 # Execute file with Mac
 .out
+
+#Execute file with Window
+.exe
+.cpp
