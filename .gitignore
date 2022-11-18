@@ -350,8 +350,11 @@ MigrationBackup/
 .ionide/
 
 # Execute file with Mac
-.out
+*.out
 
-#Execute file with Window
-.exe
-.cpp
+# Execute file with Window
+*.exe
+
+# Visual studio configure file
+*.filters
+*.vcxproj
