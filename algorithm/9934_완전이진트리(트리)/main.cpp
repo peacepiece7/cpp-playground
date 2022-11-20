@@ -27,6 +27,7 @@ https://www.acmicpc.net/problem/9934
 6 2
 1 4 5 7
 */
+
 #include<iostream>
 #include<vector>
 #include<queue>
