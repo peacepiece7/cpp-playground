@@ -36,17 +36,19 @@ string s;
 string isChar(char c) {
     if(c - 'a' >= 0 && c - 'a' <= 26) return "lower";
     if(c-'A' >= 0 && c-'A'<=26) return "upper";
-    else "no";
+    else return "no";
 }
+// lower = 97 ~ 122, upper = 65 ~ 90;
 int main() {
-    cin >> s;
+    getline(cin , s);
+    string ret = "";
     for(int i = 0; i < s.size(); i++) {
-        string a = isChar(s[i]);
+        string a = isChar(s[i]%26);
         if(a == "lower") {
-            s[i] = (s[i]-'a'+13)%26;
+            ret += (char)((s[i]+13)%'a');
         }else if(a == "upper") {
-            s[i] = (s[i]-'A'+13)%26;
-        }
+            ret += (char)((s[i]+13)%'a');
+        }else ret += s[i];
     }
-    cout << s << "\n";
+    cout << ret << "\n";
 }
