@@ -2,6 +2,7 @@
 
 const fs = require("fs")
 const { get } = require("http")
+const { format } = require("path")
 // import { PDFDocument, StandardFonts } from 'pdf-lib'
 
 // 1. await new Promise를 반환하는 함수
@@ -67,9 +68,12 @@ const takeNames = async (dir, ...formats) => {
   const subFileObj = {}
   const sortOutMethods = makeSortOutMethods(...formats)
   subFileObj.dirs = await safePromise((resolve) => serveDirectories(dir, resolve))
-  formats.map(async (format) => {
-    typeof sortOutMethods[format] == 'function' ? subFileObj[`${format}s`] = await safePromise((resolve) => serveFiles(dir, sortOutMethods[format], resolve)) : null
-  })
+  for(let i = 0;i < formats.length; i++)  {
+    typeof sortOutMethods[formats[i]] == 'function' ? subFileObj[`${formats[i]}s`] = await safePromise((resolve) => serveFiles(dir, sortOutMethods[formats[i]], resolve)) : null
+  }
+    // map, foreach로 돌리면 안되는 이유?
+  formats.forEach(async(format) => typeof sortOutMethods[format] == 'function' ? subFileObj[`${format}s`] = await safePromise((resolve) => serveFiles(dir, sortOutMethods[format], resolve)) : null)
+
   return subFileObj
 }
 
