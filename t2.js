@@ -38,40 +38,43 @@ const { get } = require("http")
 // //   • Written to a file in Node
 // //   • Downloaded from the browser
 
-const sortOutPdfFiles = (files) => files.filter((file) => file.toLowerCase().includes('.pdf'))
-const getDirectories = (dirs) => dirs.filter((dirs) => dirs.isDirectory())
-
-const safely = async (fn) => await new Promise((res) => fn(res))
-const servePdfFiles = (dir, res) => fs.readdir(dir, (err, files) => err ? res([]) : res(sortOutPdfFiles(files)))
-const serveDirectories = (dir, res) => fs.readdir(dir,{withFileTypes : true}, (err, files) => err ? res([]) : res(getDirectories(files).map((v) => v.name)))
-
-const obj = await Object.create({}, {
-  pdfFiles : {
-    async get() {
-      return await safely((resolve) => servePdfFiles(dir, resolve))
-    },
-    set(files) {
-      return sortOutPdfFiles(files)
-    }
-  },
-  directories : {
-    async get() {
-      return await safely((resolve) => servePdfFiles(dir, resolve))
-    },
-    set(dirs) {
-      return getDirectories(dirs)
-    }
-  }
- })
-
-const convertPdfMetaData = async (dir) => {
-  try {
-    /** @type {string[]} */
-   const directories = await safely((resolve) => serveDirectories(dir, resolve))
 
 
-  } catch (err) {
-    console.log(err)
+
+
+const safePromise = async (fn) => {
+  try{
+    return await new Promise((res) => fn(res))
+  }catch(err){
+    console.error(err)
   }
 }
-convertPdfMetaData('C:\\Users\\lynil\\OneDrive\\processing')
+
+const safelyResolve = async (fn) => await new Promise((res) => fn(res))
+
+const serveFiles = (dir, filterFn, resolve) => fs.readdir(dir, (err, files) => err ? resolve([]) : resolve(filterFn(files)))
+
+const getDirectories = (dirs) => dirs.filter((dirs) => dirs.isDirectory())
+const serveDirectories = (dir, res) => fs.readdir(dir, {withFileTypes : true}, (err, files) => err ? res([]) : res(getDirectories(files).map((v) => v.name)))
+
+const makeSortOutMethods = (...formats) => {
+  const obj = {};
+  formats.map((format) => obj[format] = (files) => files.filter((file) => file.toLowerCase().includes(format)))
+  return obj
+}
+
+const takeNames = async (dir, ...formats) => {
+  const subFileObj = {}
+  const sortOutMethods = makeSortOutMethods(...formats)
+  subFileObj.dirs = await safePromise((resolve) => serveDirectories(dir, resolve))
+  formats.map(async (format) => {
+    typeof sortOutMethods[format] == 'function' ? subFileObj[`${format}s`] = await safePromise((resolve) => serveFiles(dir, sortOutMethods[format], resolve)) : null
+  })
+  return subFileObj
+}
+
+const test = async () => {
+  const subfiles = await takeNames('C:\\Users\\lynil\\OneDrive\\processing', 'pdf')
+  console.log(subfiles)
+}
+test()
